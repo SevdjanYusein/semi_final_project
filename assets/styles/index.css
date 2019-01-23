@@ -2,32 +2,56 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+
 #ads{
     text-decoration: none;
     text-align: center;
     font-size: 1em;
 }
 
-article{
-    box-sizing: border-box;
-    margin: 0px 20px;
-    width: 22%;
-    float: left;
+section{
+    justify-content: center;
 }
 
+article{
+    box-sizing: border-box;
+    margin: 20px 10px;
+    width: 29%;
+    height: 200px;
+    float: left;
+    border: 1px solid #006699 ;
+    border-radius: 2%;
+    font-size: 0.7em;
+    padding: 10px;
+    box-shadow: 0px 3px 3px grey;
+}
+
+#games{
+    clear: both;
+}
 
 #television{
     width: 900px;
 }
 
-#adsVideo{
-    margin-left: 15%;
-    text-align: center;
-    width: 900px;
-
+#poll{
+    clear: both;
+    
 }
 
-video{
+#adsVideo{
+    border-color: white;
+    text-align: center;
+    width: 900px;
+    height: 650px;
+    font-size: 1em;
+    box-shadow: none;
+}
+
+iframe{
+    width: 887px;
+    height: 499px;
     position: relative;
-    top: -560px;
+    top: -563px;
+    left: 7px;
 }
