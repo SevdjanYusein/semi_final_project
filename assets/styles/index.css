@@ -1,0 +1,33 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#ads{
+    text-decoration: none;
+    text-align: center;
+    font-size: 1em;
+}
+
+article{
+    box-sizing: border-box;
+    margin: 0px 20px;
+    width: 22%;
+    float: left;
+}
+
+
+#television{
+    width: 900px;
+}
+
+#adsVideo{
+    margin-left: 15%;
+    text-align: center;
+    width: 900px;
+
+}
+
+video{
+    position: relative;
+    top: -560px;
+}
