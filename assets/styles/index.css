@@ -31,3 +31,46 @@ video{
     position: relative;
     top: -560px;
 }
+
+#poll {
+    padding-left: 70vh;
+}
+
+#poll form {
+    padding-left: 17vh;
+    margin-top: 0vh;
+}
+
+#poll article {
+    width: 50%;
+    height: 50vh;
+    background-color: black;
+}
+
+#title p {
+    color: white;
+    padding: 1vh;
+}
+#poll h6 {
+    color: white;
+    font-size: 1em;
+    text-align: center;
+    margin-top: 2vh;
+}
+#title {
+    background-color: rgb(55,55,55);
+    border-bottom: 1px solid white;
+    height: 6vh;
+    margin-top: -2.5vh;
+}
+
+#poll label {
+    color: white;
+    font-size: 0.7em;
+}
+
+#vote-button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 3vh;
+}
