@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>upload</title>
+
+    <link rel="stylesheet" href="assets/styles/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/styles/upload-css.css">
+</head>
+<body>
+    <div id="wrapper" class="center">
+        <div id="upload-conteiner" class="center">
+            <table class="center">
+                <tr>
+                    <td class="title text-right set-padding">Тип:</td>
+                    <td class="value set-padding">
+                        <select name="type">
+                        <option value="">(избери)</option>
+                        <option value="0">Филми</option>
+                        <option value="1">Игри</option>
+                        <option value="2">Сериали</option>
+                        <option value="3">Музика</option>
+                        <option value="4">Анимация/Аниме</option>
+                        <option value="5">ХХХ</option>
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="title text-right set-padding">Торент файл:</td>
+                    <td class="value set-padding">
+                        <input type="file" name="torrent"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="title text-right set-padding">Име на торента:</td>
+                    <td class="value set-padding">
+                        <input type="text" name="name" id="name-of-torrent" size="60" placeholder="enter name"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="title text-right set-padding">Видео YouTube:</td>
+                    <td class="value set-padding">
+                        <input type="url" name="video" id="youtube-video" size="60" placeholder="enter URL"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="title text-right set-padding">Описание:</td>
+                    <td id="for-textarea" class="value set-padding">
+                        <textarea name="description" id="desc" cols="64" rows="10" placeholder="add a description"></textarea>
+                        <hr/>
+                        <ol>
+                            <li>&nbsp;&nbsp;Вашият профил и информацията, която споделяте чрез профила си е начинът,
+                            по който вие общувате с останалите членове на peer to peer обществото на Замунда;</li>
+                            <li>&nbsp;&nbsp;Вие сами решавате какво да споделяте с останалите потребители и носите
+                            отговорност за материалите, които качвате;</li>
+                            <li>&nbsp;&nbsp;Съдържанието, което качвате ще бъде достъпно до другите потребители
+                            чрез посещаване на вашия профил. Вие сами можете да изберете опцията
+                            и да позволите, да ограничите или да дадете достъп на избрани от вас потребители;</li>
+                            <li>&nbsp;&nbsp;От настройките, които ще направите във вашият профил зависи колко и кои 
+                            потребители ще имат достъп до съдържанието, което вие споделяте;</li>
+                            <li>&nbsp;&nbsp;Споделянето на това съдържание се извършва свободно, без намесата на Замунда;</li>
+                            <li>&nbsp;&nbsp;Вие се задължавате да не разменяте търговска комуникация, да не
+                            използвате функционалностите на профила с комерсиална цел.</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="in-the-center set-padding" colspan="2">
+                        <input type="checkbox" name="18-required" id="check-for-18">
+                        Съдържанието не е подходящо за лица под 18 години!
+                    </td>
+                </tr>
+                <tr>
+                    <td class="in-the-center set-padding" colspan="2">
+                            <button type="button" class="btn btn-outline-secondary">Добави</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

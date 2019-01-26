@@ -1,0 +1,64 @@
+#wrapper {
+    width: 1170px;
+}
+
+#upload-conteiner {
+    width: 60%;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+.title {
+    width: 15%;
+}
+.value {
+    width: 25%;
+}
+
+#upload-conteiner > table > tr, td {
+    border: 1px solid white;
+    background-color: rgb(1,160,226);
+}
+
+table input {
+    padding: 1vh;
+}
+
+table li {
+    list-style-type: upper-roman;
+}
+
+table [input="checkbox"] {
+    text-align: center;
+}
+
+table button {
+    padding: 1vh;
+}
+
+.in-the-center {
+    text-align: center;
+}
+
+.set-padding {
+    padding: 1vh;
+}
+
+.text-right {
+    text-align: right;
+}
+
+#for-textarea {
+    vertical-align: -webkit-baseline-middle;
+}
+
+#for-textarea ol {
+    padding-left: 4vh;
+}
+
+.btn-outline-secondary {
+    color: black;
+    border-color: black;
+}
