@@ -10,7 +10,6 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    border: 1px solid blue;
 }
 
 #logo {
@@ -44,7 +43,6 @@ nav > ul > li > img {
 }
 
 nav > ul > li {
-    padding: 2vh;
     width: 15%;
     height: 6vh;
 }
@@ -83,7 +81,6 @@ nav > ul {
 
 #exit {
     width: 15vh;
-    height: 3vh;
     height: 1vh;
     padding-bottom: 5vh;
     box-sizing: border-box;

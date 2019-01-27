@@ -2,6 +2,9 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+#main{
+    padding-left: 20%;
+}
 
 #ads{
     text-decoration: none;
@@ -9,17 +12,14 @@ body{
     font-size: 1em;
 }
 
-section{
-    justify-content: center;
-}
-
-article{
+#main article{
     box-sizing: border-box;
     margin: 20px 10px;
-    width: 29%;
+    width: 35%;
     height: 200px;
     float: left;
     border: 1px solid #006699 ;
+    background-color: #f4f8ff;
     border-radius: 2%;
     font-size: 0.7em;
     padding: 10px;
@@ -34,13 +34,8 @@ article{
     width: 900px;
 }
 
-#poll{
-    clear: both;
-    
-}
-
 #adsVideo{
-    border-color: white;
+    border: none;
     text-align: center;
     width: 900px;
     height: 650px;
@@ -48,50 +43,56 @@ article{
     box-shadow: none;
 }
 
+#main #adsVideo{
+    height: 700px;
+    width: 920px;
+    background-color: white;
+    border: none;
+    box-shadow: none;
+}
+
 iframe{
-    width: 887px;
+    width: 889px;
     height: 499px;
     position: relative;
-    top: -563px;
-    left: 7px;
-}
     top: -560px;
 }
 
 #poll {
-    padding-left: 70vh;
+    clear: both;
+    padding-left: 35%;
 }
 
 #poll form {
-    padding-left: 17vh;
+    padding-left: 25%;
     margin-top: 0vh;
 }
 
 #poll article {
     width: 50%;
     height: 50vh;
-    background-color: black;
+    background-color: #f4f8ff;
 }
 
-#title p {
-    color: white;
+.title p {
+    color: black;
     padding: 1vh;
 }
 #poll h6 {
-    color: white;
+    color: black;
     font-size: 1em;
     text-align: center;
     margin-top: 2vh;
 }
-#title {
-    background-color: rgb(55,55,55);
+.title {
+    background-color: #9bbeff;
     border-bottom: 1px solid white;
     height: 6vh;
     margin-top: -2.5vh;
 }
 
 #poll label {
-    color: white;
+    color: black;
     font-size: 0.7em;
 }
 
