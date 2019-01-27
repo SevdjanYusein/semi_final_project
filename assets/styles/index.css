@@ -2,8 +2,15 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#main{
-    padding-left: 20%;
+main{
+    display: inline-block;
+    width: 80%;
+    /* border: red solid 2px; */
+    margin-left: 10%;
+}
+
+#containers{
+    padding-left: 10%;
 }
 
 #ads{
@@ -12,17 +19,17 @@ body{
     font-size: 1em;
 }
 
-#main article{
+#containers article{
     box-sizing: border-box;
     margin: 20px 10px;
-    width: 35%;
-    height: 200px;
+    width: 41%;
+    height: 30vh;
     float: left;
     border: 1px solid #006699 ;
     background-color: #f4f8ff;
     border-radius: 2%;
-    font-size: 0.7em;
-    padding: 10px;
+    font-size: 1em;
+    padding: 10px 20px;
     box-shadow: 0px 3px 3px grey;
 }
 
@@ -31,7 +38,7 @@ body{
 }
 
 #television{
-    width: 900px;
+    width: 100%;
 }
 
 #adsVideo{
@@ -43,7 +50,7 @@ body{
     box-shadow: none;
 }
 
-#main #adsVideo{
+#containers #adsVideo{
     height: 700px;
     width: 920px;
     background-color: white;
@@ -52,26 +59,26 @@ body{
 }
 
 iframe{
-    width: 889px;
-    height: 499px;
+    width: 99%;
+    height: 73.5%;
     position: relative;
     top: -560px;
 }
 
 #poll {
     clear: both;
-    padding-left: 35%;
+    padding-left: 30%;
 }
 
 #poll form {
     padding-left: 25%;
-    margin-top: 0vh;
 }
 
 #poll article {
     width: 50%;
-    height: 50vh;
+    height: 45vh;
     background-color: #f4f8ff;
+    margin: 10px;
 }
 
 .title p {
@@ -87,7 +94,7 @@ iframe{
 .title {
     background-color: #9bbeff;
     border-bottom: 1px solid white;
-    height: 6vh;
+    height: 5vh;
     margin-top: -2.5vh;
 }
 
@@ -100,4 +107,13 @@ iframe{
     display: block;
     margin: 0 auto;
     margin-top: 3vh;
+}
+
+footer .button{
+    margin-left: 19%;
+}
+
+footer p{
+    text-align: center;
+    font-size: 0.7em;
 }

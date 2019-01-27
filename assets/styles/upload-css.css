@@ -18,8 +18,8 @@
 }
 
 #upload-conteiner > table > tr, td {
-    border: 1px solid white;
-    background-color: rgb(1,160,226);
+    border: 2px solid white;
+    background-color: #e2edff;
 }
 
 table input {
