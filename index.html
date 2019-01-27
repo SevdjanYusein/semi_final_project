@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home</title>
     <link rel="stylesheet" href="assets/reset.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/styles/index.css" />
 </head>
 
@@ -41,7 +42,58 @@
         <h3>Анкета</h3>
     </article>
     <section>
+        <article id="films">
+            <h3>Филми</h3>
+            <div> </div>
+        </article>
+        <article id="series">
+            <h3>Сериали</h3>
+            <div> </div>
+        </article>
+        <article id="games">
+            <h3>Игри</h3>
+            <div> </div>
+        </article>
+        <article id="music">
+            <h3>Музика</h3>
+            <div> </div>
+        </article>
+        <article id="adsVideo">
+            <h3>Torrents представя:</h3>
+            <img src="imgs/others/television.png" id="television" />
+            <video poster="imgs/others/videoposter.jpg" controls width="880px">
+                <source src="https://www.youtube.com/watch?v=tqqusEyL76M" />
+            </video>
 
+        </article>
+    </section>
+
+    <section id="poll">
+        <article>
+            <div id="title"><p>Анкета:</p></div>
+            <h6>Какво правите през уикенда?</h6>
+            <form action="/" method="post">
+            <input type="radio" name="poll" value="0"/>
+            <label>Прекарвам време със семейството си</label>
+            <br/>
+            <input type="radio" name="poll" value="1"/>
+            <label>Спя през повечето време</label>
+            <br/>
+            <input type="radio" name="poll" value="2"/>
+            <label>Излизам с приятели</label>
+            <br/>
+            <input type="radio" name="poll" value="3"/>
+            <label>Свалям torrents</label>
+            <br/>
+            <input type="radio" name="poll" value="4"/>
+            <label>Роботя, нямам почивен ден</label>
+            <br/>
+            <input type="radio" name="poll" value="5"/>
+            <label>Пиша си домашното</label>
+            </form>
+            <button id="vote-button" type="button" class="btn btn-secondary btn-sm">Гласувай</button>
+        </article>
+    </section>
 
 </body>
 

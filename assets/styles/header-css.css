@@ -1,5 +1,13 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 #one {
     padding-top: 2vh;
+    border: 1px solid blue;
+}
+
+header {
     display: flex;
     justify-content: space-between;
     border: 1px solid blue;
@@ -15,6 +23,20 @@
 
 nav > ul > li > a {
     text-decoration: none;
+    width: 15%;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+}
+
+nav > ul > li > a:hover {
+    text-decoration: none;
+    width: 15%;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: rgb(1,160,226);
+    text-align: center;
 }
 
 nav > ul > li > img {
@@ -23,6 +45,16 @@ nav > ul > li > img {
 
 nav > ul > li {
     padding: 2vh;
+    width: 15%;
+    height: 6vh;
+}
+
+nav > ul > li:hover {
+    width: 15%;
+    background-color: white;
+    border-top: 1px solid rgb(1,160,226);
+    border-bottom: 1px solid rgb(1,160,226);
+    height: 7vh;
 }
 
 nav > ul {
@@ -43,10 +75,31 @@ nav > ul {
     text-align: center;
 }
 
+#wellcome > p {
+    font-size: 0.7em;
+    margin-bottom: -0.3vh;
+    margin-top: -0.2vh;
+}
+
 #exit {
     width: 15vh;
     height: 3vh;
+    height: 1vh;
     padding-bottom: 5vh;
     box-sizing: border-box;
     margin-left: 1vh;
+}
+
+nav {
+    height: 6vh;
+    background-color: rgb(1,160,226);
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+#banner1 {
+    width: 50%;
+    height: 17vh;
+    margin-top: 2vh;
+    margin-left: 20vh;
 }
