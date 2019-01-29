@@ -1,0 +1,36 @@
+#div1 {
+    width: 100px;
+    height: 150px;
+    position: absolute;
+    top: 300px;
+    left: 583px;
+    background-color: lightgreen;
+}
+
+#div2 {
+    width: 80px;
+    height: 120px;
+    position: absolute;
+    top: 160px;
+    left: 364px;
+    background-color: lightblue;
+}
+
+#div3 {
+    width: 50px;
+    height: 85px;
+    position: absolute;
+    top: 71px;
+    left: 604px;
+    background-color: orange;
+}
+
+#div4 {
+    width: 80px;
+    height: 120px;
+    position: absolute;
+    top: 160px;
+    left: 803px;
+    background-color: salmon;
+}
+
