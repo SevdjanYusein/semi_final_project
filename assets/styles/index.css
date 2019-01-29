@@ -2,15 +2,17 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-main{
+/* main{
     display: inline-block;
     width: 80%;
-    /* border: red solid 2px; */
+    border: red solid 2px;
     margin-left: 10%;
-}
+} */
 
 #containers{
-    padding-left: 10%;
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
 }
 
 #ads{
@@ -20,16 +22,17 @@ main{
 }
 
 #containers article{
-    box-sizing: border-box;
-    margin: 20px 10px;
-    width: 41%;
-    height: 30vh;
     float: left;
-    border: 1px solid #006699 ;
-    background-color: #f4f8ff;
+    width: 41%;
+    margin: 20px 10px;
     border-radius: 2%;
+    border: 1px solid #006699 ;
+    padding: 20px;
+    height: 40vh;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: #f4f8ff;
     font-size: 1em;
-    padding: 10px 20px;
     box-shadow: 0px 3px 3px grey;
 }
 
@@ -60,14 +63,16 @@ main{
 
 iframe{
     width: 99%;
-    height: 73.5%;
+    height: 74%;
     position: relative;
-    top: -560px;
+    top: -548px;
 }
 
 #poll {
     clear: both;
     padding-left: 30%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 #poll form {
