@@ -62,3 +62,23 @@ table button {
     color: black;
     border-color: black;
 }
+
+.genre-xxx {
+    display: none;
+    /* display: table-row; */
+}
+
+.genre-games {
+    display: none;
+    /* display: table-row; */
+}
+
+.genre-movies-series-cartoons {
+    display: none;
+    /* display: table-row; */
+}
+
+.genre-music {
+    display: none;
+    /* display: table-row; */
+}
