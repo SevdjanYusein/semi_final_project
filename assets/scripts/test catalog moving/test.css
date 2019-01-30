@@ -4,7 +4,7 @@
     position: absolute;
     top: 300px;
     left: 583px;
-    background-color: lightgreen;
+    /* background-color: lightgreen; */
 }
 
 #div2 {
@@ -13,7 +13,7 @@
     position: absolute;
     top: 160px;
     left: 364px;
-    background-color: lightblue;
+    /* background-color: lightblue; */
 }
 
 #div3 {
@@ -22,7 +22,7 @@
     position: absolute;
     top: 71px;
     left: 604px;
-    background-color: orange;
+    /* background-color: orange; */
 }
 
 #div4 {
@@ -31,6 +31,49 @@
     position: absolute;
     top: 160px;
     left: 803px;
-    background-color: salmon;
+    /* background-color: salmon; */
 }
 
+.shadow {
+    -webkit-box-shadow: 4px 9px 53px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 9px 53px -1px rgba(0,0,0,0.75);
+    box-shadow: 4px 9px 53px -1px rgba(0,0,0,0.75);
+}
+
+.border {
+    border: 1px solid black;
+    border-radius: 10%;
+}
+
+h6 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 100%;
+    margin-top: 8%;
+}
+
+.design {
+    width: 90%;
+    height: 94%;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    border-radius: 5%;
+    margin: 0.7vh auto;
+}
+
+#cover1 {
+    background-image: url('https://m.media-amazon.com/images/M/MV5BMTE0YWFmOTMtYTU2ZS00ZTIxLWE3OTEtYTNiYzBkZjViZThiXkEyXkFqcGdeQXVyODMzMzQ4OTI@._V1_SY1000_CR0,0,675,1000_AL_.jpg');
+}
+
+#cover2 {
+    background-image: url('https://upload.wikimedia.org/wikipedia/en/thumb/6/64/Need_for_Speed_Payback_standard_edition_cover_art.jpg/220px-Need_for_Speed_Payback_standard_edition_cover_art.jpg');
+}
+
+#cover3 {
+    background-image: url('https://previews.123rf.com/images/jovanas/jovanas1603/jovanas160301771/54202775-18-age-restriction-sign.jpg');
+}
+
+#cover4 {
+    background-image: url('https://99designs-blog.imgix.net/blog/wp-content/uploads/2013/01/DavidGuetta-NothingbuttheBeat-Cover-e1357607997997.jpg?auto=format&q=60&fit=max&w=930');
+}
