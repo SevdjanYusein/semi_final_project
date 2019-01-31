@@ -2,22 +2,15 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* main{
-    display: inline-block;
-    width: 80%;
-    border: red solid 2px;
-    margin-left: 10%;
-} */
-
 #containers{
     display: inline-block;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 7.5%;
 }
 
 #ads{
     text-decoration: none;
-    text-align: center;
+    /* text-align: center; */
     font-size: 1em;
 }
 
@@ -45,6 +38,7 @@ body{
 }
 
 #adsVideo{
+    clear: both;
     border: none;
     text-align: center;
     width: 900px;
@@ -70,7 +64,7 @@ iframe{
 
 #poll {
     clear: both;
-    padding-left: 30%;
+    padding-left: 25%;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -86,7 +80,7 @@ iframe{
     margin: 10px;
 }
 
-.title p {
+.titlee p {
     color: black;
     padding: 1vh;
 }
@@ -96,7 +90,7 @@ iframe{
     text-align: center;
     margin-top: 2vh;
 }
-.title {
+.titlee {
     background-color: #9bbeff;
     border-bottom: 1px solid white;
     height: 5vh;
