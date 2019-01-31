@@ -6,6 +6,13 @@ var div3 = document.querySelector('#div3');
 
 var div4 = document.querySelector('#div4');
 
+// console.log(div1);
+// console.log(typeof div1);
+
+// div1.identical = 1;
+// console.log(div1);
+// console.log(div1.identical);
+
 
 var shirina1 = 100;
 var visochina1 = 150;
@@ -27,81 +34,85 @@ var visochina4 = 120;
 var mop4 = 160;
 var left4 = 803;
 
+const shirini = [100, 80, 50, 80];
+const visochini = [150, 120, 85, 120];
+const mopove = [300, 160, 71, 160];
+const leftove = [583, 364, 604, 803];
 
 var globalID;
 
 function moveFrontToLeft() {
-    if (left1 > 365 && mop1 > 160) {
+    if (leftove[0] > 365 && mopove[0] > 160) {
         if (globalID) {
             window.cancelAnimationFrame(globalID);
         }
         
-        mop1 -= 2.5;
-        left1 -= 3.8;
-        shirina1 -= 0.3;
-        visochina1 -= 0.48;
+        mopove[0] -= 2.5;
+        leftove[0] -= 3.8;
+        shirini[0] -= 0.3;
+        visochini[0] -= 0.48;
         
-        div1.style.width = shirina1 + 'px';
-        div1.style.height = visochina1 + 'px';
-        div1.style.top = mop1 + 'px';
-        div1.style.left = left1 + 'px';
+        div1.style.width = shirini[0] + 'px';
+        div1.style.height = visochini[0] + 'px';
+        div1.style.top = mopove[0] + 'px';
+        div1.style.left = leftove[0] + 'px';
     
         globalID = window.requestAnimationFrame(moveFrontToLeft);
     }
 
-    if (left2 < 604 && mop2 > 71) {
+    if (leftove[1] < 604 && mopove[1] > 71) {
         if (globalID) {
             window.cancelAnimationFrame(globalID);
         }
         
-        mop2 -= 2.5;
-        left2 += 6.5;
-        shirina2 -= 0.9;
-        visochina2 -= 0.9;
+        mopove[1] -= 2.5;
+        leftove[1] += 6.5;
+        shirini[1] -= 0.9;
+        visochini[1] -= 0.9;
         
-        div2.style.width = shirina2 + 'px';
-        div2.style.height = visochina2 + 'px';
-        div2.style.top = mop2 + 'px';
-        div2.style.left = left2 + 'px';
+        div2.style.width = shirini[1] + 'px';
+        div2.style.height = visochini[1] + 'px';
+        div2.style.top = mopove[1] + 'px';
+        div2.style.left = leftove[1] + 'px';
     
         globalID = window.requestAnimationFrame(moveFrontToLeft);
     }
 
-    if (left3 < 803 && mop3 < 160) {
+    if (leftove[2] < 803 && mopove[2] < 160) {
         if (globalID) {
             window.cancelAnimationFrame(globalID);
         }
         
-        mop3 += 2.9;
-        left3 += 6.5;
-        shirina3 += 0.9;
-        visochina3 += 1.1;
+        mopove[2] += 2.9;
+        leftove[2] += 6.5;
+        shirini[2] += 0.9;
+        visochini[2] += 1.1;
         
-        div3.style.width = shirina3 + 'px';
-        div3.style.height = visochina3 + 'px';
-        div3.style.top = mop3 + 'px';
-        div3.style.left = left3 + 'px';
+        div3.style.width = shirini[2] + 'px';
+        div3.style.height = visochini[2] + 'px';
+        div3.style.top = mopove[2] + 'px';
+        div3.style.left = leftove[2] + 'px';
     
         globalID = window.requestAnimationFrame(moveFrontToLeft);
     }
     
-    if (left4 > 583 && mop4 < 300) {
+    if (leftove[3] > 583 && mopove[3] < 300) {
         if (globalID) {
             window.cancelAnimationFrame(globalID);
         }
         
-        mop4 += 2.9;
-        left4 -= 6.5;
-        shirina4 += 0.9;
-        visochina4 += 1.1;
+        mopove[3] += 2.9;
+        leftove[3] -= 6.5;
+        shirini[3] += 0.9;
+        visochini[3] += 1.1;
         
-        div4.style.width = shirina4 + 'px';
-        div4.style.height = visochina4 + 'px';
-        div4.style.top = mop4 + 'px';
-        div4.style.left = left4 + 'px';
+        div4.style.width = shirini[3] + 'px';
+        div4.style.height = visochini[3] + 'px';
+        div4.style.top = mopove[3] + 'px';
+        div4.style.left = leftove[3] + 'px';
     
         globalID = window.requestAnimationFrame(moveFrontToLeft);
     }
 
-
+    
 }
