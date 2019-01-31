@@ -1,40 +1,38 @@
 window.addEventListener('DOMContentLoaded', function() {
     document.querySelector('#torrent-type').addEventListener('change', function () {
-        var movies = document.querySelector('.genre-movies-series-cartoons');
-        var games = document.querySelector('.genre-games');
-        var music = document.querySelector('.genre-music');
-        var xxx = document.querySelector('.genre-xxx');
-        
+        var movies = document.querySelectorAll('.genre-movies-series-cartoons');
+        var games = document.querySelectorAll('.genre-games');
+        var music = document.querySelectorAll('.genre-music');
+        var xxx = document.querySelectorAll('.genre-xxx');
+        console.log(music);
         if (this.value === "movies"
         || this.value === "series"
         || this.value === "animation") {
-            movies.style.display = 'table-row';
-            // movies.forEach(movie => movie.style.display = 'table-row');
-            games.style.display = 'none';
-            music.style.display = 'none';
-            xxx.style.display = 'none';
+            movies.forEach(movie => movie.style.display = 'table-row');
+            games.forEach(game => game.style.display = 'none');
+            music.forEach(m => m.style.display = 'none');
+            xxx.forEach(x => x.style.display = 'none');
         }
         
         if (this.value === "games") {
-            movies.style.display = 'none';
-            games.style.display = 'table-row';
-            // games.forEach(game => game.style.display = 'table-row');
-            music.style.display = 'none';
-            xxx.style.display = 'none';
+            movies.forEach(movie => movie.style.display = 'none');
+            games.forEach(game => game.style.display = 'table-row');
+            music.forEach(m => m.style.display = 'none');
+            xxx.forEach(x => x.style.display = 'none');
         }
         
         if (this.value === "music") {
-            movies.style.display = 'none';
-            games.style.display = 'none';
-            music.style.display = 'table-row';
-            xxx.style.display = 'none';
+            movies.forEach(movie => movie.style.display = 'none');
+            games.forEach(game => game.style.display = 'none');
+            music.forEach(m => m.style.display = 'table-row');
+            xxx.forEach(x => x.style.display = 'none');
         }
         
         if (this.value === "xxx") {
-            movies.style.display = 'none';
-            games.style.display = 'none';
-            music.style.display = 'none';
-            xxx.style.display = 'table-row';
+            movies.forEach(movie => movie.style.display = 'none');
+            games.forEach(game => game.style.display = 'none');
+            music.forEach(m => m.style.display = 'none');
+            xxx.forEach(x => x.style.display = 'table-row');
         }
     }, false);
 }, false);
