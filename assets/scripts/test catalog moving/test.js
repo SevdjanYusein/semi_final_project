@@ -13,7 +13,6 @@ var div4 = document.querySelector('#div4');
 // console.log(div1);
 // console.log(div1.identical);
 
-
 var shirina1 = 100;
 var visochina1 = 150;
 var mop1 = 300;
@@ -52,10 +51,6 @@ function moveFrontToLeft() {
         shirini[0] -= 0.3;
         visochini[0] -= 0.48;
         
-        div1.style.width = shirini[0] + 'px';
-        div1.style.height = visochini[0] + 'px';
-        div1.style.top = mopove[0] + 'px';
-        div1.style.left = leftove[0] + 'px';
     
         globalID = window.requestAnimationFrame(moveFrontToLeft);
     }
@@ -70,10 +65,6 @@ function moveFrontToLeft() {
         shirini[1] -= 0.9;
         visochini[1] -= 0.9;
         
-        div2.style.width = shirini[1] + 'px';
-        div2.style.height = visochini[1] + 'px';
-        div2.style.top = mopove[1] + 'px';
-        div2.style.left = leftove[1] + 'px';
     
         globalID = window.requestAnimationFrame(moveFrontToLeft);
     }
@@ -88,10 +79,6 @@ function moveFrontToLeft() {
         shirini[2] += 0.9;
         visochini[2] += 1.1;
         
-        div3.style.width = shirini[2] + 'px';
-        div3.style.height = visochini[2] + 'px';
-        div3.style.top = mopove[2] + 'px';
-        div3.style.left = leftove[2] + 'px';
     
         globalID = window.requestAnimationFrame(moveFrontToLeft);
     }
@@ -106,13 +93,10 @@ function moveFrontToLeft() {
         shirini[3] += 0.9;
         visochini[3] += 1.1;
         
-        div4.style.width = shirini[3] + 'px';
-        div4.style.height = visochini[3] + 'px';
-        div4.style.top = mopove[3] + 'px';
-        div4.style.left = leftove[3] + 'px';
     
         globalID = window.requestAnimationFrame(moveFrontToLeft);
     }
+}
 
     
 }
