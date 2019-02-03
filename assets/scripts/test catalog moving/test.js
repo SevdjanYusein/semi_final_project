@@ -113,6 +113,4 @@ function moveFrontToLeft() {
     
         globalID = window.requestAnimationFrame(moveFrontToLeft);
     }
-
-    
 }
