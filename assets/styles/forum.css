@@ -1,0 +1,9 @@
+#forum-uc {
+    display: none;
+    width: 100%;
+    height: 150vh;
+    background-image: url(../../imgs/forum/forum\ torrents.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
