@@ -18,40 +18,30 @@ header {
     background-size: cover;
 }
 
-nav > ul > li > a {
+nav > ul > li {
     text-decoration: none;
     width: 15%;
     font-weight: bold;
     font-size: 1.3em;
     color: white;
     text-align: center;
+    height: 6vh;
   }
 
-nav > ul > li > a:hover {
+nav > ul > li:hover {
     text-decoration: none;
     width: 15%;
     font-weight: bold;
     font-size: 1.5em;
     color: rgb(1,160,226);
     text-align: center;
-}
-
-nav > ul > li > img {
-    padding-left: 1vh;
-}
-
-nav > ul > li {
-    width: 15%;
-    height: 6vh;
-}
-
-nav > ul > li:hover {
-    width: 15%;
     background-color: white;
     border-top: 1px solid rgb(1,160,226);
     border-bottom: 1px solid rgb(1,160,226);
     height: 7vh;
+    cursor: pointer;
 }
+
 
 nav > ul {
     list-style-type: none;
