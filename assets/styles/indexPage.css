@@ -40,16 +40,33 @@
         clear: both;
         width: 100%;
     }
+    #containers {
+        width: 100%;
+        margin: 0;
+    }
+    #wrapper {
+        width: 100%;
+    }
     #one nav{
         font-size: 0.4em;
         height: 20px;
+        margin: auto;
     }
-   #banner1{
+    #banner1{
        display: none;
-   }
-   #logo{
-       width: 10px;
-   }
+    }
+    #wellcome{
+       display: none;
+    }
+    #adsVideo{
+       display: none;
+    }
+    #logo{
+       width: 20vh;
+    }
+    #poll {
+        width: 100%;
+    }
 }
 
 
