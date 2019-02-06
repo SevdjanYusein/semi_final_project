@@ -8,10 +8,12 @@ $(function() {
     $('#login').on('click', function(event) {
         event.originalEvent.preventDefault();
 
-        let user = userStorage.login($('#username').val(), $('#password').val());
+        var user = userStorage.login($('#username').val(), $('#password').val());
+        // console.log(user);
 
         if (user) {
             user.isLoged = true;
+             localStorage.setItem('loggedUser', JSON.stringify(user));//new
 
             $('#nameOfUser').css('display', 'inline');
             $('#nameOfUser').text($('#username').val());
@@ -27,6 +29,10 @@ $(function() {
             $('#forum-uc').hide();
             $('#blog-uc').hide();
             $('#upload-conteiner').hide();
+
+            $('#username').val('');
+            $('#password').val('');
+
         } else {
             $('#err').show();
         }
@@ -76,6 +82,10 @@ $(function() {
             $('#success').show();
             $('#success').hide(3500);
             $('#loginForm').show(3500);
+
+            $('#username2').val('');
+            $('#password2').val('');
+            $('#email2').val('');
         }
     });
 });
