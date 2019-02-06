@@ -1,0 +1,26 @@
+{
+  "name": "semi_final_project",
+  "version": "1.0.0",
+  "description": "torrents project",
+  "main": "userController.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SevdjanYusein/semi_final_project.git"
+  },
+  "keywords": [
+    "Sevdjan",
+    "Alex"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SevdjanYusein/semi_final_project/issues"
+  },
+  "homepage": "https://github.com/SevdjanYusein/semi_final_project#readme",
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}

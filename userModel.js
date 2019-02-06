@@ -7,6 +7,7 @@ var userStorage = (function() {
             this.email = email;
             this.uploads = 0;
             this.downloads = 0;
+            this.isLoged = false;
         }
     }
 

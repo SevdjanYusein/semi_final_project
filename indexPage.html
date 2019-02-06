@@ -15,8 +15,12 @@
     <link rel="stylesheet" href="assets/styles/index.css" />
     <link rel="stylesheet" href="assets/styles/upload-css.css">
     <link rel="stylesheet" href="assets/styles/forumAndBlog.css">
+    <link rel="stylesheet" href="assets/styles/login_register.css">
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="assets/scripts/select-change-page.js"></script>
     <script src="assets/scripts/upload-script.js"></script>
+    <script src="userModel.js"></script>
+    <script src="userController.js"></script>
 
 </head>
 
@@ -30,9 +34,9 @@
                 </div>
                 <div id="wellcome">
                     <h6>Добре дошъл</h6>
-                    <h6>username</h6>
-                    <p>Качени: 0</p>
-                    <p>Свалени: 0</p>
+                    <p id="name"></p>
+                    <p id="ups"></p>
+                    <p id="downs"></p>
                     <button id="exit" type="button" class="btn btn-outline-info">изход</button>
                 </div>
             </header>
@@ -46,7 +50,7 @@
                     <li id="forum">Форум</li>
                     <li id="subs">Субтитри </li>
                     <li id="blog">Блог </li>
-                    <li id="profile">Профил</li>
+                    <li id="profile-nav">Профил</li>
                 </ul>
             </nav>
             <div id="mobile-nav">
@@ -327,8 +331,67 @@
                     </tr>
                 </table>
             </div>
+            
             <div id="blog-uc"></div>
+
             <div id="forum-uc"></div>
+
+            <div id="user">
+                <div id="success">
+                    <h1>Вие се регистрирахте успешно!</h1>
+                </div>
+            
+                <form id="loginForm" action="">
+                    <div>
+                        <label for="username">Моля въведете име:</label>
+                        <br/>
+                        <input id='username' type="text" placeholder="username" />
+                    </div>
+                    <div>
+                        <label for="username">Моля въведете парола:</label>
+                        <br/>
+                        <input id='password' type="password" placeholder="password" />
+                    </div>
+            
+                    <div id="err">
+                        <p>Невалидно име или парола!</p>
+                    </div>
+            
+                    <div>
+                        <button id="login">Login</button>
+                        <button id="showRegisterForm">Register</button>
+                    </div>
+                </form>
+            
+                <form id="registerForm" action="">
+                    <div id='usernameContainer'>
+                        <label for="username2">Моля въведете име:</label>
+                        <br/>
+                        <input id='username2' type="text" placeholder="Username:" />
+                        <p class='error'></p>
+                    </div>
+                    <div id='passwordContainer'>
+                        <label for="password2">Моля въведете парола:</label>
+                        <br/>
+                        <input id='password2' type="password" placeholder="Password:" />
+                        <p class='error'></p>
+                    </div>
+                    <div id='emailContainer'>
+                        <label for="email2">Моля въведете e-mail:</label>
+                        <br/>
+                        <input id='email2' type="email" placeholder="Email:" />
+                        <p class='error'></p>
+                    </div>
+            
+                    <div>
+                        <button id="register">Register</button>
+                    </div>
+                </form>
+            
+                <div id="profile">
+                    <h1>Добре дошъл, <P id="nameOfUser"></P></h1>
+                </div>
+            </div>
         </div>
         <footer>
             <hr />
