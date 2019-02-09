@@ -1,0 +1,13 @@
+h1{
+    color: skyblue;
+}
+
+ul li{
+    border: 1px solid skyblue;
+    margin: 5px;
+    border-radius: 5%;
+}
+
+li{
+    list-style-type: none;
+}

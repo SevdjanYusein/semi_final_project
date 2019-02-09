@@ -17,9 +17,12 @@
     <link rel="stylesheet" href="assets/styles/forumAndBlog.css">
     <link rel="stylesheet" href="assets/styles/login_register.css">
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="userModel.js"></script>
-    <script src="userController.js"></script>
+   
+    <script src="user/userModel.js"></script>
+    <script src="user/userController.js"></script>
+    <script src="upload/uploadModel.js"></script>
     <script src="assets/scripts/upload-script.js"></script>
+    <script src="upload/torrentController.js"></script>
     <script src="assets/scripts/select-change-page.js"></script>
 
 </head>
@@ -53,6 +56,7 @@
                     <li id="profile-nav">Профил</li>
                 </ul>
             </nav>
+
             <div id="mobile-nav">
                 <select id="mobile-menu">
                     <option><a href="#">Начало</a></option>
@@ -332,6 +336,9 @@
                 </table>
             </div>
             
+            <div id="torrents">     
+            </div>
+
             <div id="blog-uc"></div>
 
             <div id="forum-uc"></div>
@@ -393,6 +400,7 @@
                 </div>
             </div>
         </div>
+
         <footer>
             <hr />
             <div class="button">
