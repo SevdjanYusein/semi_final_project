@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>torrents</title>
+    <link rel="stylesheet" href="torrents.css" />
+
+    <script src="../node_modules/handlebars/dist/handlebars.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+
+    <script src="../upload/uploadModel.js"></script>
+    <script src="torrentController.js"></script>
+
+</head>
+
+<body>
+    <h1>torrents</h1>
+    <form id="filterType">
+        <span>Сортирай по: </span>
+        <select >
+            <option value="all">покажи всички</option>
+            <option value="genre">жанр</option>
+            <option value="type">тип</option>
+            <option value="likes">харесвания</option>
+            <option value="downloads">сваляния</option>
+        </select>
+    </form>
+
+    <ul id="torrents">
+
+    </ul>
+</body>
+
+</html> 
