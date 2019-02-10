@@ -1,0 +1,67 @@
+.rowStyle {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cover {
+    width: 20%;
+    height: 20vh;
+    /* border: 1px solid black; */
+    border-radius: 10%;
+    text-align: center;
+}
+
+.cover:hover {
+    transform: scale(1.08);
+    cursor: pointer;
+}
+
+h4 {
+    font-weight: bold;
+    margin-top: 47%;
+    color: blue;
+}
+
+#second-row, #cat-container {
+    margin-top: 7vh;
+}
+
+#second-row {
+    margin-bottom: 10vh;
+}
+
+.design {
+    background-size: cover;
+    background-position: center;
+    -webkit-box-shadow: 7px 3px 49px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 3px 49px -4px rgba(0,0,0,0.75);
+    box-shadow: 7px 3px 49px -4px rgba(0,0,0,0.75);
+    /* overflow: hidden; */
+}
+
+#first {
+    background-image: url('../imgs/catalogs/moviesCover.jpg')
+}
+#second {
+    background-image: url('../imgs/catalogs/gamesCover.jpg')
+}
+#third {
+    background-image: url('../imgs/catalogs/seriesCover.jpg')
+}
+#fourth {
+    background-image: url('../imgs/catalogs/musicCover.jpg')
+}
+#fifth {
+    background-image: url('../imgs/catalogs/animeCover.jpg')
+}
+#sixth {
+    background-image: url('../imgs/catalogs/xxxCover.jpg')
+}
+
+#list > li {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}

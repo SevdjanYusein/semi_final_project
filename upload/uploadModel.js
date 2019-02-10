@@ -94,13 +94,19 @@ class TorrentStorage {
         this._allTorrents.forEach(torrent => torrent.showTorrent());
     }
 
-    sortByType(type) {
-        const currentCatalog = this._allTorrents.filter(torrent => torrent.type === type);
+    showSpecificCatalog(type) {
+        var currentCatalog = [];
+        this._allTorrents.forEach(torrent => {
+            if (torrent.type == type) {
+                currentCatalog.push(torrent);
+            }
+        });
+        return currentCatalog;
     }
 
     sortByLikes() {
         // const currentCatalog = this._allTorrents.filter(torrent => torrent.type === type);
-        const currentCatalog= _allTorrents.sort((item1, item2) => {
+        const currentCatalog = _allTorrents.sort((item1, item2) => {
             return item2.likes - item1.likes;
         });
         return currentCatalog;
@@ -108,7 +114,7 @@ class TorrentStorage {
 
     sortByDownloads() {
         // const currentCatalog = this._allTorrents.filter(torrent => torrent.type === type);
-        const currentCatalog= _allTorrents.sort((item1, item2) => {
+        const currentCatalog = _allTorrents.sort((item1, item2) => {
             return item2.downloads - item1.downloads;
         });
         return currentCatalog;
