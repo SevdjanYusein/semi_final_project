@@ -18,11 +18,14 @@ function catalogController() {
                     $('#list').append($(html));
                 });
 
+<<<<<<< HEAD
                 $('button').on('click', function () {
                     $.get('torrents/torrentTemplate.htm').then(data => {
                         $('main').html(data);
                     });
                 });
+=======
+>>>>>>> 977e6c7374b6a13693b51a74739f8d7652c5408a
             });
 
         });
@@ -35,6 +38,7 @@ function catalogController() {
             $('main').html('<ul>').attr('id', 'list');
             location.replace('#page=catalogs/games');
 
+<<<<<<< HEAD
             $.get('catalogs/oneCatalog.htm').then(text => {
                 const template = Handlebars.compile(text);
 
@@ -43,6 +47,8 @@ function catalogController() {
                     $('#list').append($(html));
                 });
             });
+=======
+>>>>>>> 977e6c7374b6a13693b51a74739f8d7652c5408a
         });
 
         $('#third').on('click', function () {
@@ -53,6 +59,7 @@ function catalogController() {
             $('main').html('<ul>').attr('id', 'list');
             location.replace('#page=catalogs/series');
 
+<<<<<<< HEAD
             $.get('catalogs/oneCatalog.htm').then(text => {
                 const template = Handlebars.compile(text);
 
@@ -61,6 +68,8 @@ function catalogController() {
                     $('#list').append($(html));
                 });
             });
+=======
+>>>>>>> 977e6c7374b6a13693b51a74739f8d7652c5408a
         });
 
         $('#fourth').on('click', function () {
@@ -71,6 +80,7 @@ function catalogController() {
             $('main').html('<ul>').attr('id', 'list');
             location.replace('#page=catalogs/music');
 
+<<<<<<< HEAD
             $.get('catalogs/oneCatalog.htm').then(text => {
                 const template = Handlebars.compile(text);
 
@@ -79,6 +89,8 @@ function catalogController() {
                     $('#list').append($(html));
                 });
             });
+=======
+>>>>>>> 977e6c7374b6a13693b51a74739f8d7652c5408a
         });
 
         $('#fifth').on('click', function () {
@@ -89,6 +101,7 @@ function catalogController() {
             $('main').html('<ul>').attr('id', 'list');
             location.replace('#page=catalogs/animes');
 
+<<<<<<< HEAD
             $.get('catalogs/oneCatalog.htm').then(text => {
                 const template = Handlebars.compile(text);
 
@@ -117,6 +130,8 @@ function catalogController() {
             });
         });
 
+=======
+>>>>>>> 977e6c7374b6a13693b51a74739f8d7652c5408a
 
     });
 }
