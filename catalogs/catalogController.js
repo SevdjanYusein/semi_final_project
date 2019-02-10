@@ -19,8 +19,18 @@ function catalogController() {
         });
 
         $('button').on('click', function() {
-            $.get('torrents/torrentTemplate.htm').then(data => {
-                $('main').html(data);
+            
+            $.get('catalogs/torrentDetails.htm').then(data => {
+                const template = Handlebars.compile(data);
+
+            let id = +location.hash.split('#')[1];
+            
+            for (let t of torrents) {
+                if (t.id === id) {
+                    const html = template(t);
+                    $('main').html(html);
+                }
+            }
             });
         });
         });
@@ -42,6 +52,22 @@ function catalogController() {
             const html = template(t);
             $('#list').append($(html));
         });
+
+        $('button').on('click', function() {
+            
+            $.get('catalogs/torrentDetails.htm').then(data => {
+                const template = Handlebars.compile(data);
+
+            let id = +location.hash.split('#')[1];
+            
+            for (let t of torrents) {
+                if (t.id === id) {
+                    const html = template(t);
+                    $('main').html(html);
+                }
+            }
+            });
+        });
         });
     });
     
@@ -59,6 +85,22 @@ function catalogController() {
         torrents.forEach(t => {
             const html = template(t);
             $('#list').append($(html));
+        });
+
+        $('button').on('click', function() {
+            
+            $.get('catalogs/torrentDetails.htm').then(data => {
+                const template = Handlebars.compile(data);
+
+            let id = +location.hash.split('#')[1];
+            
+            for (let t of torrents) {
+                if (t.id === id) {
+                    const html = template(t);
+                    $('main').html(html);
+                }
+            }
+            });
         });
         });
     });
@@ -78,6 +120,22 @@ function catalogController() {
             const html = template(t);
             $('#list').append($(html));
         });
+
+        $('button').on('click', function() {
+            
+            $.get('catalogs/torrentDetails.htm').then(data => {
+                const template = Handlebars.compile(data);
+
+            let id = +location.hash.split('#')[1];
+            
+            for (let t of torrents) {
+                if (t.id === id) {
+                    const html = template(t);
+                    $('main').html(html);
+                }
+            }
+            });
+        });
         });
     });
     
@@ -96,25 +154,46 @@ function catalogController() {
             const html = template(t);
             $('#list').append($(html));
         });
+
+        $('button').on('click', function() {
+            
+            $.get('catalogs/torrentDetails.htm').then(data => {
+                const template = Handlebars.compile(data);
+
+            let id = +location.hash.split('#')[1];
+            
+            for (let t of torrents) {
+                if (t.id === id) {
+                    const html = template(t);
+                    $('main').html(html);
+                }
+            }
+            });
+        });
         });
     });
     
     $('#sixth').on('click', function() {
+        var res = confirm('Имате ли 18 години!');
+        if (res == true) {
+            $('main').html('<h1>').text('Ахх тии... !');
+        } else {
+            location.replace('#page=catalogs');
+        }
+        // var torrents = [];
+        // torrents = torrentsStorage.showSpecificCatalog('xxx');
 
-        var torrents = [];
-        torrents = torrentsStorage.showSpecificCatalog('xxx');
+        // $('main').html('<ul>').attr('id', 'list');
+        // location.replace('#page=catalogs/xxx');
 
-        $('main').html('<ul>').attr('id', 'list');
-        location.replace('#page=catalogs/xxx');
+        // $.get('catalogs/oneCatalog.htm').then(text => {
+        //     const template = Handlebars.compile(text);
 
-        $.get('catalogs/oneCatalog.htm').then(text => {
-            const template = Handlebars.compile(text);
-
-        torrents.forEach(t => {
-            const html = template(t);
-            $('#list').append($(html));
-        });
-        });
+        // torrents.forEach(t => {
+        //     const html = template(t);
+        //     $('#list').append($(html));
+        // });
+        // });
     });
     
 
