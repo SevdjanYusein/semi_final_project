@@ -17,7 +17,14 @@ function catalogController() {
             const html = template(t);
             $('#list').append($(html));
         });
+
+        $('button').on('click', function() {
+            $.get('torrents/torrentTemplate.htm').then(data => {
+                $('main').html(data);
+            });
         });
+        });
+        
     });
     
     $('#second').on('click', function() {

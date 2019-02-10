@@ -17,19 +17,19 @@
         <tr>
             <td class="title text-right set-padding">Обложка:</td>
             <td class="value set-padding">
-                <input class="uploadForm" type="file" name="torrent" />
+                <input class="uploadForm" type="file" name="torrent" id="cover-of-torrent" />
             </td>
         </tr>
         <tr>
             <td class="title text-right set-padding">Име на торента:</td>
             <td class="value set-padding">
                 <input class="uploadForm" type="text" name="name" id="name-of-torrent" size="60"
-                    placeholder="enter name" />
+                    placeholder="enter name" required />
             </td>
         </tr>
         <tr class="genre-movies-series-cartoons">
             <td class="title text-right set-padding">Жанр:</td>
-            <td class="value set-padding">
+            <td class="value set-padding genre-of-torrent">
                 <input type="checkbox" name="janr1" value="animation" />
                 <label for="janr1">Анимация</label>
                 <input type="checkbox" name="janr2" value="anime" />
@@ -59,7 +59,7 @@
         </tr>
         <tr class="genre-games">
             <td class="title text-right set-padding">Жанр:</td>
-            <td class="value set-padding">
+            <td class="value set-padding genre-of-torrent">
                 <input type="checkbox" name="janr1" value="3d" />
                 <label for="janr1">3D</label>
                 <input type="checkbox" name="janr2" value="rpg" />
@@ -76,7 +76,7 @@
         </tr>
         <tr class="genre-music">
             <td class="title text-right set-padding">Жанр:</td>
-            <td class="value set-padding">
+            <td class="value set-padding genre-of-torrent">
                 <input type="checkbox" name="janr1" value="bg" />
                 <label for="janr1">BG</label>
                 <input type="checkbox" name="janr2" value="chillout" />
@@ -110,7 +110,7 @@
         </tr>
         <tr class="genre-xxx">
             <td class="title text-right set-padding">Жанр:</td>
-            <td class="value set-padding">
+            <td class="value set-padding genre-of-torrent">
                 <input type="checkbox" name="janr1" value="amateur" />
                 <label for="janr1">Amateur</label>
                 <input type="checkbox" name="janr2" value="big-tits" />
@@ -192,7 +192,7 @@
         </tr>
         <tr>
             <td class="in-the-center set-padding" colspan="2">
-                <button type="button" class="btn btn-outline-secondary">Добави</button>
+                <button id="add-torrent" type="button" class="btn btn-outline-secondary">Добави</button>
             </td>
         </tr>
     </table>

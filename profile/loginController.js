@@ -14,11 +14,11 @@ function loginController() {
     
             if (user) {
                 user.isLoged = true;
-                 localStorage.setItem('loggedUser', JSON.stringify(user));//new
-    
+                 localStorage.setItem('loggedUser', JSON.stringify(user));
+
                 $('#nameOfUser').css('display', 'inline'); 
-                $('#nameOfUser').text($('#username').val());
-                $('#name').text($('#username').val());
+                $('#nameOfUser').text(user.username);
+                $('#name').text(user.username);
                 $('#ups').text('Качени: ' + user.uploads);
                 $('#downs').text('Свалени: ' + user.downloads);
                 $('#exit').show();
