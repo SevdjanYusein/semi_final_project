@@ -1,13 +1,24 @@
-h1{
-    color: skyblue;
+main{
+    width: 80%;
+    margin: 3% auto;
 }
 
-ul li{
-    border: 1px solid skyblue;
-    margin: 5px;
-    border-radius: 5%;
-}
-
-li{
+.torrentInList{
+    width: 100%;
+    height: 16vh;
     list-style-type: none;
+    border: 1px solid skyblue;
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px;
+}
+
+.torrentInList > div{
+    width: 15vh;
+}
+
+.torrentInList img{
+    max-width: 80px;
+    max-height: 80px;
 }

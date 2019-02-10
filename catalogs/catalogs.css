@@ -18,12 +18,12 @@
 
 h4 {
     font-weight: bold;
-    margin-top: 47%;
-    color: blue;
+    margin-top: 21vh;
+    color: rgb(1,160,226);;
 }
 
 #second-row, #cat-container {
-    margin-top: 7vh;
+    margin-top: 8vh;
 }
 
 #second-row {

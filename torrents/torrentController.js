@@ -2,9 +2,9 @@ function torrentControler() {
     torrents = torrentsStorage._allTorrents;
 
     $.get('torrents/torrents.htm').then(data => {
-        $('main').html(data);
+        $('main').html(data); 
     });
-
+ 
     $.get('torrents/torrentTemplate.htm').then(text => {
         const template = Handlebars.compile(text);
 

@@ -25,7 +25,9 @@ nav > ul > li {
     font-size: 1.3em;
     color: white;
     text-align: center;
+    padding: 5px;
     height: 6vh;
+    min-height: 6vh;
   }
 
 nav > ul > li:hover {
@@ -36,9 +38,9 @@ nav > ul > li:hover {
     color: rgb(1,160,226);
     text-align: center;
     background-color: white;
-    border-top: 1px solid rgb(1,160,226);
-    border-bottom: 1px solid rgb(1,160,226);
-    height: 7vh;
+    border: 1px solid rgb(1,160,226);
+    /* border-bottom: 1px solid rgb(1,160,226); */
+    height: 6.5vh;
     cursor: pointer;
 }
 
@@ -93,7 +95,7 @@ nav {
 }
 
 #banner1 {
-    background-image: url('https://i.pinimg.com/originals/a9/64/db/a964db5475d0bb51c2fe6e7b1d12b3ad.jpg');
+    /* background-image: url('https://i.pinimg.com/originals/a9/64/db/a964db5475d0bb51c2fe6e7b1d12b3ad.jpg'); */
     background-size: cover;
     background-position: center;
     overflow: hidden;

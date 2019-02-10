@@ -1,7 +1,21 @@
-<li id='{{id}}'>
-    <span> <img src = '{{cover}}' width="100px"/> </span>
-    <span>Тип: {{type}} </span>
-    <span>Име: {{name}} </span>
-    <span>Харесвания: {{likes}} </span>
-    <span>Сваляния: {{downloads}} </span> 
-</li> 
+<li id='{{id}}' class="torrentInList">
+    <div> <img src='{{cover}}' /> </div>
+
+    <div>
+        <p>Име:</p>
+        <p> {{name}} </p>
+    </div>
+    <div>
+        <p>Тип:</p>
+        <p>{{type}}</p>
+    </div>
+    <div>
+        <p>Харесвания:</p>
+        <p>{{likes}}</p>
+    </div>
+    <div>
+        <p>Сваляния:</p>
+        <p>{{downloads}}</p>
+    </div>
+
+</li>
