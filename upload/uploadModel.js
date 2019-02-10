@@ -91,8 +91,11 @@ class TorrentStorage {
     }
 
     showAllTorrents() {
-        this._allTorrents.forEach(torrent => torrent.showTorrent());
+        return this._allTorrents;
     }
+    // showAllTorrents() {
+    //     this._allTorrents.forEach(torrent => torrent.showTorrent());
+    // }
 
     showSpecificCatalog(type) {
         var currentCatalog = [];
@@ -106,18 +109,18 @@ class TorrentStorage {
 
     sortByLikes() {
         // const currentCatalog = this._allTorrents.filter(torrent => torrent.type === type);
-        const currentCatalog = _allTorrents.sort((item1, item2) => {
+        this._allTorrents.sort((item1, item2) => {
             return item2.likes - item1.likes;
         });
-        return currentCatalog;
+        return this._allTorrents;
     }
 
     sortByDownloads() {
         // const currentCatalog = this._allTorrents.filter(torrent => torrent.type === type);
-        const currentCatalog = _allTorrents.sort((item1, item2) => {
+        this._allTorrents.sort((item1, item2) => {
             return item2.downloads - item1.downloads;
         });
-        return currentCatalog;
+        return this._allTorrents;
     }
 
     sortByGenre(genre) {
@@ -160,5 +163,9 @@ var torrents = [
 ];
 
 torrents.forEach(t => torrentsStorage.addTorrent(t));
+
+// console.log(torrentsStorage);
+
+// torrentsStorage.sortByLikes();
 
 // console.log(torrentsStorage);

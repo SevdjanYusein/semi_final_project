@@ -3,7 +3,7 @@ function router() {
 
     switch (page) {
         case 'home' : homeController(); break;
-        case 'torrents' : torrentController(); break;
+        case 'torrents' : torrentControler(); break;
         case 'catalogs' : catalogController(); break;
         case 'upload' : uploadController(); break;
         case 'forum' : forumController(); break;
