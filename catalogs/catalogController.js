@@ -10,9 +10,6 @@ function catalogController() {
         $('main').html('<ul>').attr('id', 'list');
         location.replace('#page=catalogs/movies');
 
-        $.get('catalogs/oneCatalog.htm').then(text => {
-            const template = Handlebars.compile(text);
-
         torrents.forEach(t => {
             const html = template(t);
             $('#list').append($(html));
@@ -36,22 +33,40 @@ function catalogController() {
                 currentTorrent.likes++;
                 $('#haresvaniq').text('Харесвания: ' + currentTorrent.likes);
             });
-            $('#just-download-it').on('click', function() {
-                console.log(currentTorrent);
-                currentTorrent.downloads++;
-                alert('Вие изтеглихе торента: ' + currentTorrent.name);
-                $('#svalqniq').text('Сваляния: ' + currentTorrent.downloads);
-                let loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
-                loggedUser.uploads++;
-                localStorage.setItem('loggedUser', JSON.stringify(loggedUser));
-                $('#ups').text('Качени: ' + loggedUser.downloads);
-            });
-            });
+                    $('#list').append($(html));
+                });
 
-        });
-        });
-        
-    });
+                $('button').on('click', function () {
+
+                    $.get('catalogs/torrentDetails.htm').then(data => {
+                        const template = Handlebars.compile(data);
+
+                        let id = +location.hash.split('#')[1];
+
+                        for (let t of torrents) {
+                            if (t.id === id) {
+                                const html = template(t);
+                                $('main').html(html);
+                            }
+                        }
+                        $('#just-like-it').on('click', function() {
+                            console.log(currentTorrent);
+                            currentTorrent.likes++;
+                            $('#haresvaniq').text('Харесвания: ' + currentTorrent.likes);
+                        });
+                        $('#just-download-it').on('click', function() {
+                            console.log(currentTorrent);
+                            currentTorrent.downloads++;
+                            alert('Вие изтеглихе торента: ' + currentTorrent.name);
+                            $('#svalqniq').text('Сваляния: ' + currentTorrent.downloads);
+                            let loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
+                            loggedUser.uploads++;
+                            localStorage.setItem('loggedUser', JSON.stringify(loggedUser));
+                            $('#ups').text('Качени: ' + loggedUser.downloads);
+                        });
+                    });
+                });
+            });
     
     $('#second').on('click', function() {
 
