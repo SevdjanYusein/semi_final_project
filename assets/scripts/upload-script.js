@@ -13,7 +13,7 @@ window.addEventListener('DOMContentLoaded', function () {
             music.forEach(m => m.style.display = 'none');
             xxx.forEach(x => x.style.display = 'none');
         }
-
+ 
         if (this.value === "games") {
             movies.forEach(movie => movie.style.display = 'none');
             games.forEach(game => game.style.display = 'table-row');

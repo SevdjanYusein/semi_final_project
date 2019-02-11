@@ -36,6 +36,79 @@ function uploadController() {
             }
         });
 
+        document.querySelector("#name-of-torrent").addEventListener('blur', event => {
+            event.preventDefault();
+            if (event.target.value.trim().length > 4) {
+                event.target.style.boxShadow = '1px 1px 1px 1px green';
+            } else {
+                event.target.style.boxShadow = '1px 1px 1px 1px red';
+            }
+        }, false);
+    
+        document.querySelector("#desc").addEventListener('blur', event => {
+            event.preventDefault();
+            if (event.target.value.trim().length > 20) {
+                event.target.style.boxShadow = '1px 1px 1px 1px green';
+            } else {
+                event.target.style.boxShadow = '1px 1px 1px 1px red';
+            }
+        }, false);
+    
+        document.querySelector("#year").addEventListener('blur', event => {
+            event.preventDefault();
+            if (+event.target.value > 1900 && +event.target.value < 2020) {
+                event.target.style.boxShadow = '1px 1px 1px 1px green';
+            } else {
+                event.target.style.boxShadow = '1px 1px 1px 1px red';
+            }
+        }, false);
+    
+        document.querySelector("#youtube-video").addEventListener('blur', event => {
+            event.preventDefault();
+            var re = /[a-z0-9-\.]+\.[a-z]{2,4}\/?([^\s<>\#%"\,\{\}\\|\\\^\[\]`]+)?$/; //reg expression to validate url
+            if (re.test(event.target.value)) {
+                event.target.style.boxShadow = '1px 1px 1px 1px green';
+            } else {
+                event.target.style.boxShadow = '1px 1px 1px 1px red';
+            }
+        }, false);
+    
+        document.querySelector("#singer").addEventListener('blur', event => {
+            event.preventDefault();
+            if (event.target.value.trim().length > 4) {
+                event.target.style.boxShadow = '1px 1px 1px 1px green';
+            } else {
+                event.target.style.boxShadow = '1px 1px 1px 1px red';
+            }
+        }, false);
+    
+        document.querySelector("#maker").addEventListener('blur', event => {
+            event.preventDefault();
+            if (event.target.value.trim().length > 4) {
+                event.target.style.boxShadow = '1px 1px 1px 1px green';
+            } else {
+                event.target.style.boxShadow = '1px 1px 1px 1px red';
+            }
+        }, false);
+    
+        document.querySelector("#name-of-director").addEventListener('blur', event => {
+            event.preventDefault();
+            if (event.target.value.trim().length > 4) {
+                event.target.style.boxShadow = '1px 1px 1px 1px green';
+            } else {
+                event.target.style.boxShadow = '1px 1px 1px 1px red';
+            }
+        }, false);
+    
+        document.querySelector("#duration").addEventListener('blur', event => {
+            event.preventDefault();
+            if (+event.target.value > 0) {
+                event.target.style.boxShadow = '1px 1px 1px 1px green';
+            } else {
+                event.target.style.boxShadow = '1px 1px 1px 1px red';
+            }
+        }, false);
+ 
         $('#add-torrent').on('click', function() {
             var type = $('#torrent-type').val();
             console.log(type);

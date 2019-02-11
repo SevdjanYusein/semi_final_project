@@ -69,10 +69,6 @@ iframe{
     text-overflow: ellipsis;
 }
 
-#poll form {
-    padding-left: 25%;
-}
-
 #poll article {
     width: 50%;
     height: 45vh;
@@ -84,6 +80,7 @@ iframe{
     color: black;
     padding: 1vh;
 }
+
 #poll h6 {
     color: black;
     font-size: 1em;
@@ -97,16 +94,41 @@ iframe{
     margin-top: -2.5vh;
 }
 
-#poll label {
+#poll > article > form > label {
+    padding-left: 10px;
     color: black;
     font-size: 0.7em;
 }
 
+#poll > article > form > input {
+    margin-left: 30px;
+
+}
+
 #vote-button {
     display: block;
-    margin: 0 auto;
-    margin-top: 3vh;
-}
+    float: center;
+    margin: 0px auto;
+    width: 15vh;
+    height: 5vh;
+    background-color: white;
+    border-radius: 20px;
+    border-color: #006699;
+    box-shadow: 0px 3px 3px grey;
+    color: black;
+} 
+
+#vote-button:hover{
+    float: center;
+    margin: 0px auto;
+    width: 14vh;
+    height: 4.5vh;
+    background-color: #e7edf7;
+    border-radius: 20px;
+    border-color: #006699;
+    box-shadow: 0px 3px 3px grey;
+    cursor: pointer;
+} 
 
 footer .button{
     margin-left: 19%;
