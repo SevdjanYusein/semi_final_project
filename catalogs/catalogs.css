@@ -60,11 +60,39 @@ h4 {
 
 #list > li {
     width: 70%;
-    margin: auto;
+    height: 30vh;
+    margin: 0px auto;
     display: flex;
     justify-content: space-between;
     text-decoration: none;
 }
+
+#seemore{
+    position: relative;
+    left: 5vh;
+    width: 15vh;
+    height: 5vh;
+    background-color: white;
+    border-radius: 20px;
+    border-color: #006699;
+    box-shadow: 0px 3px 3px grey;
+}
+
+#seemore:hover{
+    margin-right: 0.5vh;
+    margin-bottom: 0.5vh;
+    height: 4.5vh;
+    background-color: #e7edf7;
+    border-radius: 20px;
+    border-color: #006699;
+    box-shadow: 0px 3px 3px grey;
+    cursor: pointer;
+}
+
+#titleOfTorrent > h1, p{
+    text-align: center;
+}
+
 
 #torrent-container {
     width: 70%;
@@ -93,7 +121,29 @@ h4 {
 #buttons > button {
     float: right;
     margin-top: 5vh;
+    width: 15vh;
+    height: 5vh;
+    background-color: white;
+    border-radius: 20px;
+    border-color: #006699;
+    box-shadow: 0px 3px 3px grey;
 } 
+
+#buttons > button:hover{
+    float: right;
+    margin-top: 5vh;
+    margin-right: 0.5vh;
+    margin-bottom: 0.5vh;
+    width: 14vh;
+    height: 4.5vh;
+    background-color: #e7edf7;
+    border-radius: 20px;
+    border-color: #006699;
+    box-shadow: 0px 3px 3px grey;
+    cursor: pointer;
+} 
+
+
 
 #buttons > p {
     text-align: center;
