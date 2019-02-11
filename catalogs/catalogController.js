@@ -40,6 +40,7 @@ function catalogController() {
                                 currentTorrent.likes++;
                                 $('#haresvaniq').text('Харесвания: ' + currentTorrent.likes);
                             } else {
+                                alert('Необходимо е да влезете в профила си!');
                                 location.replace('#page=profile-nav');
                             }
                         });
@@ -52,6 +53,7 @@ function catalogController() {
                                 localStorage.setItem('loggedUser', JSON.stringify(loggedUser));
                                 $('#downs').text('Свалени: ' + loggedUser.downloads);
                             } else {
+                                alert('Необходимо е да влезете в профила си!');
                                 location.replace('#page=profile-nav');
                             }
                         });
@@ -97,6 +99,7 @@ function catalogController() {
                                     currentTorrent.likes++;
                                     $('#haresvaniq').text('Харесвания: ' + currentTorrent.likes);
                                 } else {
+                                    alert('Необходимо е да влезете в профила си!');
                                     location.replace('#page=profile-nav');
                                 }
                             });
@@ -109,6 +112,7 @@ function catalogController() {
                                     localStorage.setItem('loggedUser', JSON.stringify(loggedUser));
                                     $('#downs').text('Свалени: ' + loggedUser.downloads);
                                 } else {
+                                    alert('Необходимо е да влезете в профила си!');
                                     location.replace('#page=profile-nav');
                                 }
                             });
@@ -154,6 +158,7 @@ function catalogController() {
                                     currentTorrent.likes++;
                                     $('#haresvaniq').text('Харесвания: ' + currentTorrent.likes);
                                 } else {
+                                    alert('Необходимо е да влезете в профила си!');
                                     location.replace('#page=profile-nav');
                                 }
                             });
@@ -166,6 +171,7 @@ function catalogController() {
                                     localStorage.setItem('loggedUser', JSON.stringify(loggedUser));
                                     $('#downs').text('Свалени: ' + loggedUser.downloads);
                                 } else {
+                                    alert('Необходимо е да влезете в профила си!');
                                     location.replace('#page=profile-nav');
                                 }
                             });
@@ -211,6 +217,7 @@ function catalogController() {
                                     currentTorrent.likes++;
                                     $('#haresvaniq').text('Харесвания: ' + currentTorrent.likes);
                                 } else {
+                                    alert('Необходимо е да влезете в профила си!');
                                     location.replace('#page=profile-nav');
                                 }
                             });
@@ -223,6 +230,7 @@ function catalogController() {
                                     localStorage.setItem('loggedUser', JSON.stringify(loggedUser));
                                     $('#downs').text('Свалени: ' + loggedUser.downloads);
                                 } else {
+                                    alert('Необходимо е да влезете в профила си!');
                                     location.replace('#page=profile-nav');
                                 }
                             });
@@ -268,6 +276,7 @@ function catalogController() {
                                     currentTorrent.likes++;
                                     $('#haresvaniq').text('Харесвания: ' + currentTorrent.likes);
                                 } else {
+                                    alert('Необходимо е да влезете в профила си!');
                                     location.replace('#page=profile-nav');
                                 }
                             });
@@ -280,6 +289,7 @@ function catalogController() {
                                     localStorage.setItem('loggedUser', JSON.stringify(loggedUser));
                                     $('#downs').text('Свалени: ' + loggedUser.downloads);
                                 } else {
+                                    alert('Необходимо е да влезете в профила си!');
                                     location.replace('#page=profile-nav');
                                 }
                             });
