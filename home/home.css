@@ -1,0 +1,22 @@
+.ulContainer > li {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1vh;
+}
+
+#ul-movies > li  p {
+    font-size: 1em;
+    /* margin-top: -2vh; */
+}
+
+.ulContainer > li  a {
+    text-decoration: none;
+}
+
+#ul-movies {
+    overflow: hidden;
+}
+
+.margin-top {
+    margin-top: -2.5vh;
+}
