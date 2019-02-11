@@ -28,6 +28,7 @@ function catalogController() {
 
                         for (let t of torrents) {
                             if (t.id === id) {
+                                var currentTorrent = t;
                                 const html = template(t);
                                 $('main').html(html);
                             }
@@ -43,7 +44,7 @@ function catalogController() {
                             alert('Вие изтеглихе торента: ' + currentTorrent.name);
                             $('#svalqniq').text('Сваляния: ' + currentTorrent.downloads);
                             let loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
-                            loggedUser.uploads++;
+                            loggedUser.downloads++;
                             localStorage.setItem('loggedUser', JSON.stringify(loggedUser));
                             $('#ups').text('Качени: ' + loggedUser.downloads);
                         });
@@ -212,5 +213,6 @@ function catalogController() {
     });
     
 
+    });
     });
 }
