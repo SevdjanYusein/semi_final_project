@@ -10,29 +10,12 @@ function catalogController() {
         $('main').html('<ul>').attr('id', 'list');
         location.replace('#page=catalogs/movies');
 
-        torrents.forEach(t => {
-            const html = template(t);
-            $('#list').append($(html));
-        });
 
-        $('button').on('click', function() {
-            $.get('catalogs/torrentDetails.htm').then(data => {
-                const template = Handlebars.compile(data);
+            $.get('catalogs/oneCatalog.htm').then(text => {
+                const template = Handlebars.compile(text);
 
-            let id = +location.hash.split('#')[1];
-            
-            for (let t of torrents) {
-                if (t.id === id) {
-                    var currentTorrent = t;
+                torrents.forEach(t => {
                     const html = template(t);
-                    $('main').html(html);
-                }
-            }
-            $('#just-like-it').on('click', function() {
-                console.log(currentTorrent);
-                currentTorrent.likes++;
-                $('#haresvaniq').text('Харесвания: ' + currentTorrent.likes);
-            });
                     $('#list').append($(html));
                 });
 
