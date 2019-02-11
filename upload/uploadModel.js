@@ -133,7 +133,7 @@ var torrentsStorage = new TorrentStorage();
 var type = ['movies', "animes", "series", "music", "games"];
 var filmsCover = ['../imgs/covers/greysanatomy.jpg', '../imgs/covers/holdthedark.jpg', '../imgs/covers/mickey.jpg', '../imgs/covers/replicas.jpg', '../imgs/covers/smallfoot.jpg', '../imgs/covers/thebigbangtheory.jpg'];
 var musicCover = ['../imgs/covers/50cent.jpg', '../imgs/covers/beatles.jpg', '../imgs/covers/beethoven.jpg', '../imgs/covers/btr.jpg', '../imgs/covers/vangelis.jpg'];
-var gamesCover = ['../imgs/covers/lol.jpg', '../imgs/covers/wow.jpg', '../imgs/covers/needforspeed.jpg', '../imgs/covers/metro.jpg', '../imgs/covers/thewitcher3.jpg'];
+var gamesCover = ['../imgs/covers/lol1.jpg', '../imgs/covers/wow.jpg', '../imgs/covers/needforspeed.jpg', '../imgs/covers/metro.jpg', '../imgs/covers/thewitcher3.jpg'];
 var video = ["https://www.youtube.com/watch?v=34cHO5_LX9g"];
 var filmsGenres = ["animation", "anime", "drama", "action", "comedy", "mistery", "romantic", "sport", "triller", "horror", "si-fi", "fantasy"];
 var gamesGenres = ["3d", "rpg", "fight", "logic", "sport", "strategy"];
