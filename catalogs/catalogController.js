@@ -2,13 +2,14 @@ function catalogController() {
     $.get('catalogs/catalogs.htm').then(data => {
         $('main').html(data);
 
-        $('#first').on('click', function () {
+    $('#first').on('click', function() {
 
-            var torrents = [];
-            torrents = torrentsStorage.showSpecificCatalog('movies');
+        var torrents = [];
+        torrents = torrentsStorage.showSpecificCatalog('movies');
 
-            $('main').html('<ul>').attr('id', 'list');
-            location.replace('#page=catalogs/movies');
+        $('main').html('<ul>').attr('id', 'list');
+        location.replace('#page=catalogs/movies');
+
 
 
             $.get('catalogs/oneCatalog.htm').then(text => {
@@ -50,6 +51,8 @@ function catalogController() {
                     });
                 });
             });
+    
+    $('#second').on('click', function() {
 
             $('#second').on('click', function () {
 
