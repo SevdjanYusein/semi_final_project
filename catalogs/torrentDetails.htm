@@ -7,13 +7,14 @@
         <p>Режисьор: {{director}}</p>
         <p>Продължителност: {{duration}} min</p>
         <div>Видео YouTube:
-            <iframe src="{{video}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
-            </iframe>
+            <a href="{{video}}">Link to video</a>   <!--da stane v nov tab-->
         </div>
         <p>Описание: {{desc}}</p>
     </div>
     <div id="buttons">
         <button id="just-like-it">ХАРЕСВАМ</button>
+        <p id="haresvaniq">Харесвания: {{likes}}</p>
         <button id="just-download-it">ИЗТЕГЛИ</button>
+        <p id="svalqniq">Сваляния: {{downloads}}</p>
     </div>
 </div>

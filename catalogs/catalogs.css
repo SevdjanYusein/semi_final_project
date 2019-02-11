@@ -76,9 +76,6 @@ h4 {
 
 #torrent-container > img {
     height: 35vw;
-    border-radius: 5%;
-    margin-right: 2vw;
-    
 }
 
 .center-text {
@@ -93,4 +90,8 @@ h4 {
 #buttons > button {
     float: right;
     margin-top: 5vh;
+} 
+
+#buttons > p {
+    text-align: center;
 }
