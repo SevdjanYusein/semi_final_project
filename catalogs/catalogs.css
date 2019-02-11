@@ -16,10 +16,16 @@
     cursor: pointer;
 }
 
+h4{
+    font-weight: bold;
+    margin-top: 21vh;
+    color: rgb(1,160,226);
+}
+
 h2 {
     font-weight: bold;
     /* margin-top: 21vh; */
-    color: rgb(1,160,226);;
+    color: rgb(1,160,226);
 }
 
 #second-row, #cat-container {
