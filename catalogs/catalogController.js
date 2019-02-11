@@ -80,7 +80,7 @@ function catalogController() {
 
                     $('button').on('click', function () {
 
-                        $.get('catalogs/torrentDetails.htm').then(data => {
+                        $.get('catalogs/gameDetails.htm').then(data => {
                             const template = Handlebars.compile(data);
 
                             let id = +location.hash.split('#')[1];
@@ -198,7 +198,7 @@ function catalogController() {
 
                     $('button').on('click', function () {
 
-                        $.get('catalogs/torrentDetails.htm').then(data => {
+                        $.get('catalogs/musicDetails.htm').then(data => {
                             const template = Handlebars.compile(data);
 
                             let id = +location.hash.split('#')[1];
