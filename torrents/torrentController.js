@@ -56,9 +56,6 @@ function torrentControler() {
                     showFilteredTorrents();
                     break;
             }
-        });
-
-        
         });        
     });
 }
