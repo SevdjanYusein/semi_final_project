@@ -2,136 +2,217 @@ function catalogController() {
     $.get('catalogs/catalogs.htm').then(data => {
         $('main').html(data);
 
-        $('#first').on('click', function () {
+    $('#first').on('click', function() {
 
-            var torrents = [];
-            torrents = torrentsStorage.showSpecificCatalog('movies');
+        var torrents = [];
+        torrents = torrentsStorage.showSpecificCatalog('movies');
 
-            $('main').html('<ul>').attr('id', 'list');
-            location.replace('#page=catalogs/movies');
+        $('main').html('<ul>').attr('id', 'list');
+        location.replace('#page=catalogs/movies');
 
-            $.get('catalogs/oneCatalog.htm').then(text => {
-                const template = Handlebars.compile(text);
+        $.get('catalogs/oneCatalog.htm').then(text => {
+            const template = Handlebars.compile(text);
 
-                torrents.forEach(t => {
+        torrents.forEach(t => {
+            const html = template(t);
+            $('#list').append($(html));
+        });
+
+        $('button').on('click', function() {
+            $.get('catalogs/torrentDetails.htm').then(data => {
+                const template = Handlebars.compile(data);
+
+            let id = +location.hash.split('#')[1];
+            
+            for (let t of torrents) {
+                if (t.id === id) {
+                    var currentTorrent = t;
                     const html = template(t);
-                    $('#list').append($(html));
-                });
-
-<<<<<<< HEAD
-                $('button').on('click', function () {
-                    $.get('torrents/torrentTemplate.htm').then(data => {
-                        $('main').html(data);
-                    });
-                });
-=======
->>>>>>> 977e6c7374b6a13693b51a74739f8d7652c5408a
+                    $('main').html(html);
+                }
+            }
+            $('#just-like-it').on('click', function() {
+                console.log(currentTorrent);
+                currentTorrent.likes++;
+                $('#haresvaniq').text('Харесвания: ' + currentTorrent.likes);
+            });
+            $('#just-download-it').on('click', function() {
+                console.log(currentTorrent);
+                currentTorrent.downloads++;
+                alert('Вие изтеглихе торента: ' + currentTorrent.name);
+                $('#svalqniq').text('Сваляния: ' + currentTorrent.downloads);
+                let loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
+                loggedUser.uploads++;
+                localStorage.setItem('loggedUser', JSON.stringify(loggedUser));
+                $('#ups').text('Качени: ' + loggedUser.downloads);
+            });
             });
 
         });
+        });
+        
+    });
+    
+    $('#second').on('click', function() {
 
-        $('#second').on('click', function () {
+        var torrents = [];
+        torrents = torrentsStorage.showSpecificCatalog('games');
 
-            var torrents = [];
-            torrents = torrentsStorage.showSpecificCatalog('games');
+        $('main').html('<ul>').attr('id', 'list');
+        location.replace('#page=catalogs/games');
 
-            $('main').html('<ul>').attr('id', 'list');
-            location.replace('#page=catalogs/games');
+        $.get('catalogs/oneCatalog.htm').then(text => {
+            const template = Handlebars.compile(text);
 
-<<<<<<< HEAD
-            $.get('catalogs/oneCatalog.htm').then(text => {
-                const template = Handlebars.compile(text);
-
-                torrents.forEach(t => {
-                    const html = template(t);
-                    $('#list').append($(html));
-                });
-            });
-=======
->>>>>>> 977e6c7374b6a13693b51a74739f8d7652c5408a
+        torrents.forEach(t => {
+            const html = template(t);
+            $('#list').append($(html));
         });
 
-        $('#third').on('click', function () {
+        $('button').on('click', function() {
+            
+            $.get('catalogs/torrentDetails.htm').then(data => {
+                const template = Handlebars.compile(data);
 
-            var torrents = [];
-            torrents = torrentsStorage.showSpecificCatalog('series');
-
-            $('main').html('<ul>').attr('id', 'list');
-            location.replace('#page=catalogs/series');
-
-<<<<<<< HEAD
-            $.get('catalogs/oneCatalog.htm').then(text => {
-                const template = Handlebars.compile(text);
-
-                torrents.forEach(t => {
+            let id = +location.hash.split('#')[1];
+            
+            for (let t of torrents) {
+                if (t.id === id) {
                     const html = template(t);
-                    $('#list').append($(html));
-                });
-            });
-=======
->>>>>>> 977e6c7374b6a13693b51a74739f8d7652c5408a
-        });
-
-        $('#fourth').on('click', function () {
-
-            var torrents = [];
-            torrents = torrentsStorage.showSpecificCatalog('music');
-
-            $('main').html('<ul>').attr('id', 'list');
-            location.replace('#page=catalogs/music');
-
-<<<<<<< HEAD
-            $.get('catalogs/oneCatalog.htm').then(text => {
-                const template = Handlebars.compile(text);
-
-                torrents.forEach(t => {
-                    const html = template(t);
-                    $('#list').append($(html));
-                });
-            });
-=======
->>>>>>> 977e6c7374b6a13693b51a74739f8d7652c5408a
-        });
-
-        $('#fifth').on('click', function () {
-
-            var torrents = [];
-            torrents = torrentsStorage.showSpecificCatalog('animes');
-
-            $('main').html('<ul>').attr('id', 'list');
-            location.replace('#page=catalogs/animes');
-
-<<<<<<< HEAD
-            $.get('catalogs/oneCatalog.htm').then(text => {
-                const template = Handlebars.compile(text);
-
-                torrents.forEach(t => {
-                    const html = template(t);
-                    $('#list').append($(html));
-                });
+                    $('main').html(html);
+                }
+            }
             });
         });
+        });
+    });
+    
+    $('#third').on('click', function() {
 
-        $('#sixth').on('click', function () {
+        var torrents = [];
+        torrents = torrentsStorage.showSpecificCatalog('series');
 
-            var torrents = [];
-            torrents = torrentsStorage.showSpecificCatalog('xxx');
+        $('main').html('<ul>').attr('id', 'list');
+        location.replace('#page=catalogs/series');
 
-            $('main').html('<ul>').attr('id', 'list');
+        $.get('catalogs/oneCatalog.htm').then(text => {
+            const template = Handlebars.compile(text);
+
+        torrents.forEach(t => {
+            const html = template(t);
+            $('#list').append($(html));
+        });
+
+        $('button').on('click', function() {
+            
+            $.get('catalogs/torrentDetails.htm').then(data => {
+                const template = Handlebars.compile(data);
+
+            let id = +location.hash.split('#')[1];
+            
+            for (let t of torrents) {
+                if (t.id === id) {
+                    const html = template(t);
+                    $('main').html(html);
+                }
+            }
+            });
+        });
+        });
+    });
+    
+    $('#fourth').on('click', function() {
+
+        var torrents = [];
+        torrents = torrentsStorage.showSpecificCatalog('music');
+
+        $('main').html('<ul>').attr('id', 'list');
+        location.replace('#page=catalogs/music');
+
+        $.get('catalogs/oneCatalog.htm').then(text => {
+            const template = Handlebars.compile(text);
+
+        torrents.forEach(t => {
+            const html = template(t);
+            $('#list').append($(html));
+        });
+
+        $('button').on('click', function() {
+            
+            $.get('catalogs/torrentDetails.htm').then(data => {
+                const template = Handlebars.compile(data);
+
+            let id = +location.hash.split('#')[1];
+            
+            for (let t of torrents) {
+                if (t.id === id) {
+                    const html = template(t);
+                    $('main').html(html);
+                }
+            }
+            });
+        });
+        });
+    });
+    
+    $('#fifth').on('click', function() {
+
+        var torrents = [];
+        torrents = torrentsStorage.showSpecificCatalog('animes');
+
+        $('main').html('<ul>').attr('id', 'list');
+        location.replace('#page=catalogs/animes');
+
+        $.get('catalogs/oneCatalog.htm').then(text => {
+            const template = Handlebars.compile(text);
+
+        torrents.forEach(t => {
+            const html = template(t);
+            $('#list').append($(html));
+        });
+
+        $('button').on('click', function() {
+            
+            $.get('catalogs/torrentDetails.htm').then(data => {
+                const template = Handlebars.compile(data);
+
+            let id = +location.hash.split('#')[1];
+            
+            for (let t of torrents) {
+                if (t.id === id) {
+                    const html = template(t);
+                    $('main').html(html);
+                }
+            }
+            });
+        });
+        });
+    });
+    
+    $('#sixth').on('click', function() {
+        var res = confirm('Имате ли 18 години!');
+        if (res == true) {
+            $('main').html('<h1>').text('Ахх тии... !');
             location.replace('#page=catalogs/xxx');
+        } else {
+            location.replace('#page=catalogs');
+        }
+        // var torrents = [];
+        // torrents = torrentsStorage.showSpecificCatalog('xxx');
 
-            $.get('catalogs/oneCatalog.htm').then(text => {
-                const template = Handlebars.compile(text);
+        // $('main').html('<ul>').attr('id', 'list');
+        // location.replace('#page=catalogs/xxx');
 
-                torrents.forEach(t => {
-                    const html = template(t);
-                    $('#list').append($(html));
-                });
-            });
-        });
+        // $.get('catalogs/oneCatalog.htm').then(text => {
+        //     const template = Handlebars.compile(text);
 
-=======
->>>>>>> 977e6c7374b6a13693b51a74739f8d7652c5408a
+        // torrents.forEach(t => {
+        //     const html = template(t);
+        //     $('#list').append($(html));
+        // });
+        // });
+    });
+    
 
     });
 }
