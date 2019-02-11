@@ -1,4 +1,4 @@
-#login-register{
+#registerContainer, #loginContainer{
     width: 50%;
     border-radius: 10px;
     background-color: #e7edf7;
@@ -10,6 +10,8 @@
     justify-content: center 
 }
 
+
+
 form > div > input{
     width: 100%;
     padding: 12px 20px;
@@ -20,30 +22,65 @@ form > div > input{
     box-sizing: border-box;
 }
 
-form > div > label{
+form > div > label, p{
     font-style: italic;
+    font-size: 1em;
 }
 
-#register {
+#err > p{
+    text-shadow: 1px 1px grey;
+}
+
+#register, #login, #showRegisterForm {
     /* float: center; */
     position: relative;
     left: 8vh;
     width: 15vh;
     height: 5vh;
-    background-color: white;
+    background-color: #f7faff;
     border-radius: 20px;
     border-color: #006699;
     box-shadow: 0px 3px 3px grey;
 } 
+#login, #showRegisterForm{
+    left: 3vh;
+}
 
 #register:hover {
-    margin-right: 0.5vh;
+    margin-left: 0.5vh;
     margin-bottom: 0.5vh;
     width: 14vh;
     height: 4.5vh;
     border-radius: 20px;
     border-color: #006699;
+    background-color: white;
     box-shadow: 0px 3px 3px grey;
     cursor: pointer;
     font-size: 1.2em;
 } 
+
+#login:hover{
+    margin-left: 1vh;
+    margin-bottom: 0.5vh;
+    width: 14vh;
+    height: 4.5vh;
+    border-radius: 20px;
+    background-color: white;
+    border-color: #006699;
+    box-shadow: 0px 3px 3px grey;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+#showRegisterForm:hover{
+    margin-right: 0.5vh;
+    margin-bottom: 0.5vh;
+    width: 14vh;
+    height: 4.5vh;
+    border-radius: 20px;
+    background-color: white;
+    border-color: #006699;
+    box-shadow: 0px 3px 3px grey;
+    cursor: pointer;
+    font-size: 1.2em;
+}
