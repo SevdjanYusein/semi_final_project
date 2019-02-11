@@ -13,6 +13,24 @@ function torrentControler() {
             $('#torrentsList').append($(html));
         });
 
+        $('#det').on('click', function(event) {
+            event.preventDefault();
+            console.log('clikam linka')
+            $.get('catalogs/torrentDetails.htm').then(data => {
+                const template = Handlebars.compile(data);
+
+                let id = +location.hash.split('#')[1];
+
+                for (let t of torrents) {
+                    if (t.id === id) {
+                        var currentTorrent = t;
+                        const html = template(t);
+                        $('main').html(html);
+                    }
+                }
+            });
+        });
+
         $("#filterType").on("change", function (event) {
             event.preventDefault();
 
@@ -71,5 +89,24 @@ function showFilteredTorrents() {
             const html = template(t);
             $('#torrentsList').append($(html));
         });
+
+        // $('#det').on('click', function(event) {
+        //     event.preventDefault();
+        //     console.log('clikam linka')
+        //     $.get('catalogs/torrentDetails.htm').then(data => {
+        //         const template = Handlebars.compile(data);
+
+        //         let id = +location.hash.split('#')[1];
+
+        //         for (let t of torrents) {
+        //             if (t.id === id) {
+        //                 var currentTorrent = t;
+        //                 const html = template(t);
+        //                 $('main').html(html);
+        //             }
+        //         }
+        //     });
+        // });
+
     });
 }
