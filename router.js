@@ -12,7 +12,7 @@ function router() {
         case 'profile-nav' : loginController(); break;
 
         default:
-            homeController();
+            // homeController();
             break;
     }
 }
