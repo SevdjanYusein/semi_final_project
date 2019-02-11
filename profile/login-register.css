@@ -1,0 +1,49 @@
+#login-register{
+    width: 50%;
+    border-radius: 10px;
+    background-color: #e7edf7;
+    padding: 20px;
+    border-color: black;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center 
+}
+
+form > div > input{
+    width: 100%;
+    padding: 12px 20px;
+    /* margin: 8px 0; */
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form > div > label{
+    font-style: italic;
+}
+
+#register {
+    /* float: center; */
+    position: relative;
+    left: 8vh;
+    width: 15vh;
+    height: 5vh;
+    background-color: white;
+    border-radius: 20px;
+    border-color: #006699;
+    box-shadow: 0px 3px 3px grey;
+} 
+
+#register:hover {
+    margin-right: 0.5vh;
+    margin-bottom: 0.5vh;
+    width: 14vh;
+    height: 4.5vh;
+    border-radius: 20px;
+    border-color: #006699;
+    box-shadow: 0px 3px 3px grey;
+    cursor: pointer;
+    font-size: 1.2em;
+} 

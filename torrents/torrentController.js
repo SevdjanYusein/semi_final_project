@@ -13,7 +13,9 @@ function torrentControler() {
             $('#torrentsList').append($(html));
         });
 
-        $('a').on('click', function(event) {
+        $('#det').on('click', function(event) {
+            event.preventDefault();
+            console.log('clikam linka')
             $.get('catalogs/torrentDetails.htm').then(data => {
                 const template = Handlebars.compile(data);
 
@@ -24,32 +26,8 @@ function torrentControler() {
                         var currentTorrent = t;
                         const html = template(t);
                         $('main').html(html);
-                    } 
+                    }
                 }
-
-                var loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
-                $('#just-like-it').on('click', function () {
-                    if (loggedUser) {
-                        currentTorrent.likes++;
-                        $('#haresvaniq').text('Харесвания: ' + currentTorrent.likes);
-                    } else {
-                        alert('Необходимо е да влезете в профила си!');
-                        location.replace('#page=profile-nav');
-                    }
-                });
-                $('#just-download-it').on('click', function () {
-                    if (loggedUser) {
-                        currentTorrent.downloads++;
-                        alert('Вие изтеглихе торента: ' + currentTorrent.name);
-                        $('#svalqniq').text('Сваляния: ' + currentTorrent.downloads);
-                        loggedUser.downloads++;
-                        localStorage.setItem('loggedUser', JSON.stringify(loggedUser));
-                        $('#downs').text('Свалени: ' + loggedUser.downloads);
-                    } else {
-                        alert('Необходимо е да влезете в профила си!');
-                        location.replace('#page=profile-nav');
-                    }
-                });
             });
         });
 
@@ -112,47 +90,23 @@ function showFilteredTorrents() {
             $('#torrentsList').append($(html));
         });
 
-        $('a').on('click', showDetails); 
+        // $('#det').on('click', function(event) {
+        //     event.preventDefault();
+        //     console.log('clikam linka')
+        //     $.get('catalogs/torrentDetails.htm').then(data => {
+        //         const template = Handlebars.compile(data);
 
-    });
-}
+        //         let id = +location.hash.split('#')[1];
 
-function showDetails() {
-    $.get('catalogs/torrentDetails.htm').then(data => {
-        const template = Handlebars.compile(data);
+        //         for (let t of torrents) {
+        //             if (t.id === id) {
+        //                 var currentTorrent = t;
+        //                 const html = template(t);
+        //                 $('main').html(html);
+        //             }
+        //         }
+        //     });
+        // });
 
-        let id = +location.hash.split('#')[1];
-
-        for (let t of torrents) {
-            if (t.id === id) {
-                var currentTorrent = t;
-                const html = template(t);
-                $('main').html(html);
-            } 
-        }
-
-        var loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
-        $('#just-like-it').on('click', function () {
-            if (loggedUser) {
-                currentTorrent.likes++;
-                $('#haresvaniq').text('Харесвания: ' + currentTorrent.likes);
-            } else {
-                alert('Необходимо е да влезете в профила си!');
-                location.replace('#page=profile-nav');
-            }
-        });
-        $('#just-download-it').on('click', function () {
-            if (loggedUser) {
-                currentTorrent.downloads++;
-                alert('Вие изтеглихе торента: ' + currentTorrent.name);
-                $('#svalqniq').text('Сваляния: ' + currentTorrent.downloads);
-                loggedUser.downloads++;
-                localStorage.setItem('loggedUser', JSON.stringify(loggedUser));
-                $('#downs').text('Свалени: ' + loggedUser.downloads);
-            } else {
-                alert('Необходимо е да влезете в профила си!');
-                location.replace('#page=profile-nav');
-            }
-        });
     });
 }
