@@ -34,29 +34,34 @@ function catalogController() {
                                 $('main').html(html);
                             }
                         }
+                        var loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
                         $('#just-like-it').on('click', function () {
-                            console.log(currentTorrent);
-                            currentTorrent.likes++;
-                            $('#haresvaniq').text('Харесвания: ' + currentTorrent.likes);
+                            if (loggedUser) {
+                                currentTorrent.likes++;
+                                $('#haresvaniq').text('Харесвания: ' + currentTorrent.likes);
+                            } else {
+                                location.replace('#page=profile-nav');
+                            }
                         });
                         $('#just-download-it').on('click', function () {
-                            console.log(currentTorrent);
-                            currentTorrent.downloads++;
-                            alert('Вие изтеглихе торента: ' + currentTorrent.name);
-                            $('#svalqniq').text('Сваляния: ' + currentTorrent.downloads);
-                            let loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
-                            loggedUser.downloads++;
-                            localStorage.setItem('loggedUser', JSON.stringify(loggedUser));
-                            $('#ups').text('Качени: ' + loggedUser.downloads);
+                            if (loggedUser) {
+                                currentTorrent.downloads++;
+                                alert('Вие изтеглихе торента: ' + currentTorrent.name);
+                                $('#svalqniq').text('Сваляния: ' + currentTorrent.downloads);
+                                loggedUser.downloads++;
+                                localStorage.setItem('loggedUser', JSON.stringify(loggedUser));
+                                $('#downs').text('Свалени: ' + loggedUser.downloads);
+                            } else {
+                                location.replace('#page=profile-nav');
+                            }
                         });
                     });
                 });
             });
-    
-    $('#second').on('click', function() {
+        });
 
             $('#second').on('click', function () {
-
+                console.log('klikam na igri')
                 var torrents = [];
                 torrents = torrentsStorage.showSpecificCatalog('games');
 
@@ -80,10 +85,33 @@ function catalogController() {
 
                             for (let t of torrents) {
                                 if (t.id === id) {
+                                    var currentTorrent = t;
                                     const html = template(t);
                                     $('main').html(html);
                                 }
                             }
+
+                            var loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
+                            $('#just-like-it').on('click', function () {
+                                if (loggedUser) {
+                                    currentTorrent.likes++;
+                                    $('#haresvaniq').text('Харесвания: ' + currentTorrent.likes);
+                                } else {
+                                    location.replace('#page=profile-nav');
+                                }
+                            });
+                            $('#just-download-it').on('click', function () {
+                                if (loggedUser) {
+                                    currentTorrent.downloads++;
+                                    alert('Вие изтеглихе торента: ' + currentTorrent.name);
+                                    $('#svalqniq').text('Сваляния: ' + currentTorrent.downloads);
+                                    loggedUser.downloads++;
+                                    localStorage.setItem('loggedUser', JSON.stringify(loggedUser));
+                                    $('#downs').text('Свалени: ' + loggedUser.downloads);
+                                } else {
+                                    location.replace('#page=profile-nav');
+                                }
+                            });
                         });
                     });
                 });
@@ -114,10 +142,33 @@ function catalogController() {
 
                             for (let t of torrents) {
                                 if (t.id === id) {
+                                    var currentTorrent = t;
                                     const html = template(t);
                                     $('main').html(html);
                                 }
                             }
+
+                            var loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
+                            $('#just-like-it').on('click', function () {
+                                if (loggedUser) {
+                                    currentTorrent.likes++;
+                                    $('#haresvaniq').text('Харесвания: ' + currentTorrent.likes);
+                                } else {
+                                    location.replace('#page=profile-nav');
+                                }
+                            });
+                            $('#just-download-it').on('click', function () {
+                                if (loggedUser) {
+                                    currentTorrent.downloads++;
+                                    alert('Вие изтеглихе торента: ' + currentTorrent.name);
+                                    $('#svalqniq').text('Сваляния: ' + currentTorrent.downloads);
+                                    loggedUser.downloads++;
+                                    localStorage.setItem('loggedUser', JSON.stringify(loggedUser));
+                                    $('#downs').text('Свалени: ' + loggedUser.downloads);
+                                } else {
+                                    location.replace('#page=profile-nav');
+                                }
+                            });
                         });
                     });
                 });
@@ -148,10 +199,33 @@ function catalogController() {
 
                             for (let t of torrents) {
                                 if (t.id === id) {
+                                    var currentTorrent = t;
                                     const html = template(t);
                                     $('main').html(html);
                                 }
                             }
+
+                            var loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
+                            $('#just-like-it').on('click', function () {
+                                if (loggedUser) {
+                                    currentTorrent.likes++;
+                                    $('#haresvaniq').text('Харесвания: ' + currentTorrent.likes);
+                                } else {
+                                    location.replace('#page=profile-nav');
+                                }
+                            });
+                            $('#just-download-it').on('click', function () {
+                                if (loggedUser) {
+                                    currentTorrent.downloads++;
+                                    alert('Вие изтеглихе торента: ' + currentTorrent.name);
+                                    $('#svalqniq').text('Сваляния: ' + currentTorrent.downloads);
+                                    loggedUser.downloads++;
+                                    localStorage.setItem('loggedUser', JSON.stringify(loggedUser));
+                                    $('#downs').text('Свалени: ' + loggedUser.downloads);
+                                } else {
+                                    location.replace('#page=profile-nav');
+                                }
+                            });
                         });
                     });
                 });
@@ -182,10 +256,33 @@ function catalogController() {
 
                             for (let t of torrents) {
                                 if (t.id === id) {
+                                    var currentTorrent = t;
                                     const html = template(t);
                                     $('main').html(html);
                                 }
                             }
+
+                            var loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
+                            $('#just-like-it').on('click', function () {
+                                if (loggedUser) {
+                                    currentTorrent.likes++;
+                                    $('#haresvaniq').text('Харесвания: ' + currentTorrent.likes);
+                                } else {
+                                    location.replace('#page=profile-nav');
+                                }
+                            });
+                            $('#just-download-it').on('click', function () {
+                                if (loggedUser) {
+                                    currentTorrent.downloads++;
+                                    alert('Вие изтеглихе торента: ' + currentTorrent.name);
+                                    $('#svalqniq').text('Сваляния: ' + currentTorrent.downloads);
+                                    loggedUser.downloads++;
+                                    localStorage.setItem('loggedUser', JSON.stringify(loggedUser));
+                                    $('#downs').text('Свалени: ' + loggedUser.downloads);
+                                } else {
+                                    location.replace('#page=profile-nav');
+                                }
+                            });
                         });
                     });
                 });
@@ -215,8 +312,6 @@ function catalogController() {
                 // });
             });
 
-
-        });
     });
-    });
+    // });
 }
