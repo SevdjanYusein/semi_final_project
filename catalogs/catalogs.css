@@ -62,13 +62,16 @@ h2 {
     background-image: url('../imgs/catalogs/xxxCover.jpg')
 }
 
+
 #list > li {
     width: 70%;
-    height: 30vh;
+    height: 23vh;
     margin: 0px auto;
     display: flex;
     justify-content: space-between;
     text-decoration: none;
+    padding-top: 10px;
+    border-bottom: 1px solid skyblue;
 }
 
 .immage > img{

@@ -4,6 +4,7 @@ main{
 }
 
 form{
+    padding-left: 10%;
     display: inline;
     margin-left: 10px; 
 }
@@ -22,7 +23,7 @@ select:focus{
 }
 
 .torrentInList{
-    width: 100%;
+    width: 80%;
     height: 16vh;
     list-style-type: none;
     border-radius: 20px;
