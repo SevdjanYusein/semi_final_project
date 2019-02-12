@@ -31,6 +31,10 @@ form > div > label, p{
     text-shadow: 1px 1px grey;
 }
 
+#err {
+    display: none;
+}
+
 #register, #login, #showRegisterForm {
     /* float: center; */
     position: relative;
