@@ -3,12 +3,17 @@
     <div id="torrent-info">
         <h2 class="center-text">{{name}}</h2>
         <p class="center-text">{{year}}</p>
-        <p>Жанр: {{genre}}</p>
-        <p>Изпълнител: {{singer}}</p>
-        <div>Видео YouTube:
-            <a target="_blank" rel="noopener noreferrer" href="{{video}}">Link to video</a>   <!--da stane v nov tab-->
+        <p class="left">Жанр:</p><span>{{genre}}</span>
+        <br />
+        <p class="left">Изпълнител:</p> <span>{{singer}}</span>
+        <br />
+        <div>
+            <p class="left">Видео YouTube:</p>
+            <a target="_blank" rel="noopener noreferrer" href="{{video}}">Link to video</a>
         </div>
-        <p>Описание: {{desc}}</p>
+        <br />
+        <p class="left">Описание: </p>
+        <p id="desc">{{desc}}</p>
     </div>
     <div id="buttons">
         <button id="just-like-it">ХАРЕСВАМ</button>

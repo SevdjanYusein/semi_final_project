@@ -6,7 +6,6 @@
 .cover {
     width: 20%;
     height: 20vh;
-    /* border: 1px solid black; */
     border-radius: 10%;
     text-align: center;
 }
@@ -24,7 +23,6 @@ h4{
 
 h2 {
     font-weight: bold;
-    /* margin-top: 21vh; */
     color: #01a0e2;
 }
 
@@ -74,6 +72,7 @@ h2 {
 }
 
 .immage > img{
+    max-width: 120px;
     border-radius: 20px;
     box-shadow: 5px 10px 18px #888888;
 }
@@ -114,6 +113,8 @@ h2 {
 }
 
 #torrent-container > img {
+    min-width: 20vw;
+    max-width: 25vw;
     height: 35vw;
     border-radius: 5%;
     margin-right: 2vw;
@@ -123,6 +124,23 @@ h2 {
 .center-text {
     text-align: center;
     font-weight: bold;
+}
+
+.left{
+    font-size: 0.9em;
+    text-align: left;
+    display: inline-block;
+    padding-right: 5px;
+}
+
+#torrent-info > span{
+    font-weight: 600;
+}
+
+#desc{
+    height: 18vw;
+    overflow: auto;
+
 }
 
 #torrent-info ~ p {

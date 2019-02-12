@@ -1,19 +1,27 @@
 <div id="torrent-container">
-    <img src="{{cover}}" alt="">
-    <div id="torrent-info">
-        <h2 class="center-text">{{name}}</h2>
-        <p class="center-text">{{year}}</p>
-        <p>Жанр: {{genre}}</p>
-        <p>Производител: {{maker}}</p>
-        <div>Видео YouTube:
-            <a target="_blank" rel="noopener noreferrer" href="{{video}}">Link to video</a>   <!--da stane v nov tab-->
+        <img src="{{cover}}" alt="">
+        <div id="torrent-info">
+            <h2 class="center-text">{{name}}</h2>
+            <p class="center-text">{{year}}</p>
+            <p class="left">Жанр:</p><span>{{genre}}</span>
+            <br/>
+            <p class="left">Производител:</p> <span>{{maker}}</span>
+            <br/>
+            <div> <p class="left">Видео YouTube:</p>
+                <a target="_blank" rel="noopener noreferrer" href="{{video}}">Link to video</a>
+            </div>
+            <br/>
+            <p class="left">Описание: </p>
+            <p id="desc">{{desc}}</p>
         </div>
-        <p>Описание: {{desc}}</p>
+        <div id="buttons">
+            <button id="just-like-it">ХАРЕСВАМ</button>
+            <p id="haresvaniq">Харесвания: {{likes}}</p>
+            <button id="just-download-it">ИЗТЕГЛИ</button>
+            <p id="svalqniq">Сваляния: {{downloads}}</p>
+        </div>
     </div>
-    <div id="buttons">
-        <button id="just-like-it">ХАРЕСВАМ</button>
-        <p id="haresvaniq">Харесвания: {{likes}}</p>
-        <button id="just-download-it">ИЗТЕГЛИ</button>
-        <p id="svalqniq">Сваляния: {{downloads}}</p>
-    </div>
-</div>
+
+
+
+

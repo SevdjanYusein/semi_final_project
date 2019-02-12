@@ -21,7 +21,7 @@ body{
     border-radius: 2%;
     border: 1px solid #006699 ;
     padding: 20px;
-    height: 40vh;
+    height: 42vh;
     overflow: hidden;
     text-overflow: ellipsis;
     background-color: #f4f8ff;
@@ -91,7 +91,8 @@ iframe{
     background-color: #9bbeff;
     border-bottom: 1px solid white;
     height: 5vh;
-    margin-top: -2.5vh;
+    margin-top: -2vh;
+    border-radius: 10px;
 }
 
 #poll > article > form > label {
